@@ -3,117 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BTCto1M</title>
-  <meta name="description" content="BTCto1M" />
+  <title>BTCto1M LLC — 軟體與數位產品公司</title>
+  <meta name="description" content="BTCto1M LLC is a software company building consumer applications and digital products, including Banban — a decentralized, censorship-resistant social app." />
   <style>
     :root {
       --gold: #C9A24B;
       --gold-deep: #B8860B;
-      --black: #1a1a1a;
+      --ink: #1a1a1a;
+      --sub: #666;
+      --line: #ececec;
       --white: #ffffff;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
         "PingFang TC", "Microsoft JhengHei", sans-serif;
       background: var(--white);
-      color: var(--black);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 64px 20px 40px;
+      color: var(--ink);
+      line-height: 1.7;
     }
-
+    .wrap { max-width: 760px; margin: 0 auto; padding: 56px 22px 64px; }
+    header { text-align: center; border-bottom: 1px solid var(--line); padding-bottom: 40px; }
     .logo {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--gold);
-      box-shadow: 0 4px 20px rgba(201, 162, 75, 0.25);
+      width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+      border: 3px solid var(--gold); box-shadow: 0 4px 20px rgba(201,162,75,.25);
     }
-
-    h1 {
-      margin-top: 24px;
-      font-size: 1.7rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-
+    h1 { margin-top: 22px; font-size: 1.9rem; font-weight: 700; letter-spacing: .5px; }
     h1 span { color: var(--gold-deep); }
-
-    .tagline {
-      margin-top: 8px;
-      font-size: 0.95rem;
-      color: #666;
+    .tagline { margin-top: 8px; color: var(--sub); font-size: .98rem; }
+    section { padding: 38px 0; border-bottom: 1px solid var(--line); }
+    h2 { font-size: 1.15rem; color: var(--gold-deep); margin-bottom: 14px; letter-spacing: .5px; }
+    p { color: #333; margin-bottom: 12px; }
+    p.en { color: var(--sub); font-size: .92rem; }
+    .product {
+      display: block; text-decoration: none; color: inherit;
+      border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px;
+      transition: border-color .2s ease, box-shadow .2s ease, transform .15s ease;
     }
-
-    .divider {
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      border-radius: 3px;
-      margin: 28px 0 32px;
-    }
-
-    .links {
-      width: 100%;
-      max-width: 480px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .link-btn {
-      display: block;
-      text-align: center;
-      text-decoration: none;
-      color: var(--black);
-      background: var(--white);
-      border: 2px solid var(--gold);
-      border-radius: 14px;
-      padding: 18px 20px;
-      font-size: 1.05rem;
-      font-weight: 600;
-      transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease,
-        box-shadow 0.2s ease;
-    }
-
-    .link-btn:hover {
-      background: var(--gold);
-      color: var(--white);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(201, 162, 75, 0.35);
-    }
-
-    footer {
-      margin-top: auto;
-      padding-top: 40px;
-      font-size: 0.8rem;
-      color: #aaa;
-    }
+    .product + .product { margin-top: 16px; }
+    .product:hover { border-color: var(--gold); box-shadow: 0 6px 18px rgba(201,162,75,.18); transform: translateY(-2px); }
+    .product h3 { font-size: 1.1rem; margin-bottom: 6px; }
+    .product .meta { color: var(--gold-deep); font-size: .9rem; font-weight: 600; }
+    .product p { color: var(--sub); font-size: .95rem; margin: 8px 0 0; }
+    a.inline { color: var(--gold-deep); font-weight: 600; }
+    .contact a { color: var(--gold-deep); text-decoration: none; font-weight: 600; }
+    footer { padding-top: 34px; color: #999; font-size: .82rem; text-align: center; }
+    footer strong { color: #555; }
   </style>
 </head>
 <body>
-  <img class="logo" src="logo.png" alt="BTCto1M Logo" />
+  <div class="wrap">
+    <header>
+      <img class="logo" src="logo.png" alt="BTCto1M LLC logo" />
+      <h1>BTC<span>to1M</span> LLC</h1>
+      <p class="tagline">軟體與數位產品公司 · Software &amp; digital products</p>
+    </header>
 
-  <h1>BTC<span>to1M</span></h1>
-  <p class="tagline">Bitcoin to one million</p>
+    <section>
+      <h2>關於我們 · About</h2>
+      <p>BTCto1M LLC 是一間軟體公司,專注打造面向一般使用者的應用程式與數位產品。我們相信工具應該屬於使用者本人,因此把「資料自主、抗審查、跨平台」放進我們做的每一件產品裡。</p>
+      <p class="en">BTCto1M LLC is a registered limited liability company building consumer software and digital products. We focus on user-owned, censorship-resistant tools — software that belongs to the people who use it, not to any single platform.</p>
+    </section>
 
-  <div class="divider"></div>
+    <section>
+      <h2>我們的產品 · Products</h2>
 
-  <nav class="links">
-    <a class="link-btn" href="https://buy.stripe.com/8x24gyelCeNa0Ow0mv5EY08"
-       target="_blank" rel="noopener">
-      購買電子書
-    </a>
-  </nav>
+      <a class="product" href="https://ban-ban.net" target="_blank" rel="noopener">
+        <div class="meta">ban-ban.net</div>
+        <h3>Banban 板板</h3>
+        <p>建在 Nostr 協議上的去中心化、抗審查中文社交 App ── 你的帳號完全屬於你,沒有任何公司能封禁你。純文字社交 + 跨平台創作者名片 + 端對端加密私訊。A decentralized, censorship-resistant social app for Chinese-speaking users, built on the Nostr protocol.</p>
+      </a>
 
-  <footer>© <span id="year"></span> btcto1m.com</footer>
+      <a class="product" href="https://buy.stripe.com/8x24gyelCeNa0Ow0mv5EY08" target="_blank" rel="noopener">
+        <div class="meta">電子書 · E-book</div>
+        <h3>Bitcoin to one million</h3>
+        <p>關於比特幣與長期資產配置的數位電子書。A digital e-book on Bitcoin and long-term asset strategy.</p>
+      </a>
+    </section>
+
+    <section class="contact">
+      <h2>聯絡我們 · Contact</h2>
+      <p>合作、媒體或一般洽詢,歡迎來信:<br />
+        <a href="mailto:btcto1m.com@gmail.com">btcto1m.com@gmail.com</a></p>
+      <p class="en">For partnerships, press, or general enquiries, email us at btcto1m.com@gmail.com.</p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> <strong>BTCto1M LLC</strong>. All rights reserved.<br />
+      btcto1m.com
+    </footer>
+  </div>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
