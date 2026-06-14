@@ -3,51 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BTCto1M LLC — 軟體與數位產品公司</title>
-  <meta name="description" content="BTCto1M LLC is a software company building consumer applications and digital products, including Banban — a decentralized, censorship-resistant social app." />
+  <title>BTCto1M LLC — Software &amp; digital products company</title>
+  <meta name="description" content="BTCto1M LLC is a registered software company building consumer applications and digital products, including Banban, a decentralized social app built on the Nostr protocol." />
   <style>
     :root {
-      --gold: #C9A24B;
-      --gold-deep: #B8860B;
-      --ink: #1a1a1a;
-      --sub: #666;
-      --line: #ececec;
-      --white: #ffffff;
+      --gold: #C9A24B; --gold-deep: #B8860B;
+      --ink: #1a1a1a; --sub: #5f5f5f; --line: #ececec; --white: #fff;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
         "PingFang TC", "Microsoft JhengHei", sans-serif;
-      background: var(--white);
-      color: var(--ink);
-      line-height: 1.7;
+      background: var(--white); color: var(--ink); line-height: 1.75;
     }
-    .wrap { max-width: 760px; margin: 0 auto; padding: 56px 22px 64px; }
-    header { text-align: center; border-bottom: 1px solid var(--line); padding-bottom: 40px; }
-    .logo {
-      width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
-      border: 3px solid var(--gold); box-shadow: 0 4px 20px rgba(201,162,75,.25);
-    }
-    h1 { margin-top: 22px; font-size: 1.9rem; font-weight: 700; letter-spacing: .5px; }
+    .wrap { max-width: 780px; margin: 0 auto; padding: 56px 22px 72px; }
+    header { text-align: center; border-bottom: 1px solid var(--line); padding-bottom: 44px; }
+    .logo { width: 110px; height: 110px; border-radius: 50%; object-fit: cover;
+      border: 3px solid var(--gold); box-shadow: 0 4px 20px rgba(201,162,75,.25); }
+    h1 { margin-top: 22px; font-size: 1.95rem; font-weight: 700; letter-spacing: .5px; }
     h1 span { color: var(--gold-deep); }
-    .tagline { margin-top: 8px; color: var(--sub); font-size: .98rem; }
-    section { padding: 38px 0; border-bottom: 1px solid var(--line); }
-    h2 { font-size: 1.15rem; color: var(--gold-deep); margin-bottom: 14px; letter-spacing: .5px; }
-    p { color: #333; margin-bottom: 12px; }
-    p.en { color: var(--sub); font-size: .92rem; }
-    .product {
-      display: block; text-decoration: none; color: inherit;
-      border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px;
-      transition: border-color .2s ease, box-shadow .2s ease, transform .15s ease;
-    }
+    .tagline { margin-top: 10px; color: var(--sub); font-size: 1rem; }
+    .est { margin-top: 6px; color: #999; font-size: .85rem; letter-spacing: .3px; }
+    section { padding: 40px 0; border-bottom: 1px solid var(--line); }
+    h2 { font-size: 1.2rem; color: var(--gold-deep); margin-bottom: 16px; letter-spacing: .5px; }
+    p { color: #333; margin-bottom: 14px; }
+    p.en { color: var(--sub); font-size: .93rem; }
+    ul.values { list-style: none; display: grid; gap: 14px; margin-top: 6px; }
+    ul.values li { padding-left: 20px; position: relative; color: #333; }
+    ul.values li::before { content: ""; position: absolute; left: 0; top: 12px;
+      width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+    ul.values b { color: var(--ink); }
+    .product { display: block; text-decoration: none; color: inherit;
+      border: 1px solid var(--line); border-radius: 14px; padding: 24px;
+      transition: border-color .2s ease, box-shadow .2s ease, transform .15s ease; }
     .product + .product { margin-top: 16px; }
     .product:hover { border-color: var(--gold); box-shadow: 0 6px 18px rgba(201,162,75,.18); transform: translateY(-2px); }
-    .product h3 { font-size: 1.1rem; margin-bottom: 6px; }
-    .product .meta { color: var(--gold-deep); font-size: .9rem; font-weight: 600; }
-    .product p { color: var(--sub); font-size: .95rem; margin: 8px 0 0; }
-    a.inline { color: var(--gold-deep); font-weight: 600; }
+    .product .meta { color: var(--gold-deep); font-size: .88rem; font-weight: 600; letter-spacing: .3px; }
+    .product h3 { font-size: 1.15rem; margin: 6px 0; }
+    .product p { color: var(--sub); font-size: .95rem; margin: 0; }
     .contact a { color: var(--gold-deep); text-decoration: none; font-weight: 600; }
-    footer { padding-top: 34px; color: #999; font-size: .82rem; text-align: center; }
+    .info { display: grid; gap: 6px; color: var(--sub); font-size: .92rem; margin-top: 4px; }
+    .info b { color: var(--ink); font-weight: 600; }
+    footer { padding-top: 36px; color: #999; font-size: .82rem; text-align: center; }
     footer strong { color: #555; }
   </style>
 </head>
@@ -56,41 +53,57 @@
     <header>
       <img class="logo" src="logo.png" alt="BTCto1M LLC logo" />
       <h1>BTC<span>to1M</span> LLC</h1>
-      <p class="tagline">軟體與數位產品公司 · Software &amp; digital products</p>
+      <p class="tagline">軟體與數位產品公司 · A software &amp; digital products company</p>
+      <p class="est">Registered limited liability company · United States</p>
     </header>
 
     <section>
-      <h2>關於我們 · About</h2>
-      <p>BTCto1M LLC 是一間軟體公司,專注打造面向一般使用者的應用程式與數位產品。我們相信工具應該屬於使用者本人,因此把「資料自主、抗審查、跨平台」放進我們做的每一件產品裡。</p>
-      <p class="en">BTCto1M LLC is a registered limited liability company building consumer software and digital products. We focus on user-owned, censorship-resistant tools — software that belongs to the people who use it, not to any single platform.</p>
+      <h2>關於 BTCto1M LLC · About us</h2>
+      <p>BTCto1M LLC 是一間軟體公司,設計與開發面向一般使用者的應用程式與數位產品。我們的核心信念很簡單:工具應該屬於使用它的人。在一個帳號隨時可能被平台封鎖、資料被綁在單一公司手裡的時代,我們把「資料自主、抗審查、跨平台」當成每一個產品的底層原則。</p>
+      <p>我們是一支精實的團隊,從產品設計、前後端工程到上線營運一手包辦,並以開放協議(如 Nostr)為基礎打造服務,讓使用者的身分與內容不被任何單一平台掌控。</p>
+      <p class="en">BTCto1M LLC is a registered limited liability company that designs and builds consumer software and digital products. We believe tools should belong to the people who use them. Our products are built on open protocols such as Nostr, so that a user's identity and content are never locked into a single platform.</p>
     </section>
 
     <section>
-      <h2>我們的產品 · Products</h2>
+      <h2>我們在意的事 · What we stand for</h2>
+      <ul class="values">
+        <li><b>資料自主</b> — 帳號與內容由使用者本人持有,不存在我們的中央資料庫。User-owned identity and data.</li>
+        <li><b>抗審查</b> — 建在開放協議上,沒有任何單一公司能封禁使用者。Censorship-resistant by design.</li>
+        <li><b>跨平台</b> — 讓創作者把分散各處的身分集中展示。Cross-platform by default.</li>
+        <li><b>隱私優先</b> — 私訊端對端加密,連我們自己都看不到。Privacy first, end-to-end encrypted.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>我們的產品 · Our products</h2>
 
       <a class="product" href="https://ban-ban.net" target="_blank" rel="noopener">
         <div class="meta">ban-ban.net</div>
         <h3>Banban 板板</h3>
-        <p>建在 Nostr 協議上的去中心化、抗審查中文社交 App ── 你的帳號完全屬於你,沒有任何公司能封禁你。純文字社交 + 跨平台創作者名片 + 端對端加密私訊。A decentralized, censorship-resistant social app for Chinese-speaking users, built on the Nostr protocol.</p>
+        <p>BTCto1M LLC 的主力產品:一個建在 Nostr 協議上的去中心化、抗審查中文社交 App。你的帳號完全屬於你,沒有任何公司能封禁你。提供純文字社交、跨平台創作者名片、以及端對端加密的一對一私訊。Banban is our flagship product — a decentralized, censorship-resistant social app for Chinese-speaking users, built on the Nostr protocol.</p>
       </a>
 
       <a class="product" href="https://buy.stripe.com/8x24gyelCeNa0Ow0mv5EY08" target="_blank" rel="noopener">
-        <div class="meta">電子書 · E-book</div>
+        <div class="meta">數位電子書 · Digital e-book</div>
         <h3>Bitcoin to one million</h3>
-        <p>關於比特幣與長期資產配置的數位電子書。A digital e-book on Bitcoin and long-term asset strategy.</p>
+        <p>一本關於比特幣與長期資產配置的數位電子書。A digital e-book on Bitcoin and long-term asset strategy.</p>
       </a>
     </section>
 
     <section class="contact">
       <h2>聯絡我們 · Contact</h2>
-      <p>合作、媒體或一般洽詢,歡迎來信:<br />
-        <a href="mailto:btcto1m.com@gmail.com">btcto1m.com@gmail.com</a></p>
-      <p class="en">For partnerships, press, or general enquiries, email us at btcto1m.com@gmail.com.</p>
+      <p>合作、媒體、法律或一般洽詢,歡迎來信,我們會儘快回覆:</p>
+      <div class="info">
+        <span><b>Email:</b> <a href="mailto:btcto1m.com@gmail.com">btcto1m.com@gmail.com</a></span>
+        <span><b>Company:</b> BTCto1M LLC (United States)</span>
+        <span><b>Website:</b> btcto1m.com</span>
+      </div>
+      <p class="en" style="margin-top:14px">For partnerships, press, legal, or general enquiries, email btcto1m.com@gmail.com.</p>
     </section>
 
     <footer>
       © <span id="year"></span> <strong>BTCto1M LLC</strong>. All rights reserved.<br />
-      btcto1m.com
+      A registered limited liability company. · btcto1m.com
     </footer>
   </div>
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
