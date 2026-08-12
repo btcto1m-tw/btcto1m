@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>美股軟體股 選股清單｜BTCto1M</title>
+<meta name="description" content="NOW / WDAY / TEAM / CTSH / PATH 五檔美股軟體股，技術面型態突破 × 基本面利多整理。個人研究整理，不構成投資建議。">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="BTCto1M">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="美股軟體股 選股清單">
+<meta property="og:description" content="NOW / WDAY / TEAM / CTSH / PATH 五檔美股軟體股，技術面型態突破 × 基本面利多整理。">
+<meta property="og:url" content="https://btcto1m.com/20260812software/">
+<meta property="og:image" content="https://btcto1m.com/20260812software/img/now.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="美股軟體股 選股清單">
+<meta name="twitter:description" content="NOW / WDAY / TEAM / CTSH / PATH 五檔美股軟體股，技術面型態突破 × 基本面利多整理。">
+<meta name="twitter:image" content="https://btcto1m.com/20260812software/img/now.png">
+<link rel="canonical" href="https://btcto1m.com/20260812software/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --gold:oklch(0.55 0.15 75);
+    --gold-soft:oklch(0.96 0.04 85);
+    --gold-line:oklch(0.9 0.03 85);
+    --ink:oklch(0.24 0.008 250);
+    --sub:oklch(0.5 0.01 250);
+    --sans:'Noto Sans TC',-apple-system,'PingFang TC','Helvetica Neue',Arial,sans-serif;
+    --serif:'Noto Serif TC',Georgia,'Songti TC','Times New Roman',serif;
+    --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:var(--sans);color:var(--ink);background:#fff;overflow-wrap:break-word}
+  a{color:oklch(0.45 0.13 75)}
+  a:hover{color:oklch(0.35 0.1 75)}
+  main{max-width:860px;margin:0 auto;padding:40px 20px 56px}
+
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(26px,6vw,34px);line-height:1.25;margin:0 0 10px;letter-spacing:-0.01em}
+  .lede{font-size:15px;line-height:1.6;margin:0;color:var(--sub)}
+  .rule{height:2px;background:var(--gold);margin:20px 0 24px}
+
+  /* 摘要表：手機上整塊橫向捲動，頁面本身不橫向捲 */
+  .table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{width:100%;min-width:660px;border-collapse:collapse;font-size:12.5px}
+  th{padding:8px;background:var(--gold-soft);border-bottom:1.5px solid var(--gold);font-weight:700;text-align:left;white-space:nowrap}
+  td{padding:9px 8px;border-bottom:1px solid var(--gold-line);vertical-align:top}
+  .num{font-family:var(--mono)}
+  .sym{font-family:var(--mono);font-weight:500}
+  .pct{font-family:var(--mono);font-weight:500;text-align:right;color:var(--gold);white-space:nowrap}
+  th:last-child{text-align:right}
+
+  .note{font-size:12.5px;line-height:1.65;margin:18px 0 6px;color:var(--sub)}
+  .note:last-of-type{margin-bottom:0}
+
+  section.stock{margin-top:52px}
+  .head{display:flex;align-items:baseline;gap:10px 14px;flex-wrap:wrap;border-bottom:2px solid var(--gold);padding-bottom:10px}
+  .head .t{font-family:var(--mono);font-size:clamp(24px,7vw,30px);font-weight:500;letter-spacing:0.02em}
+  .head .n{font-family:var(--serif);font-size:clamp(16px,4.5vw,19px);font-weight:500}
+  .head .ex{font-size:12px;color:var(--sub);letter-spacing:0.06em}
+  .head .tag{margin-left:auto;font-size:13px;font-weight:500;padding:4px 10px;background:var(--gold-soft);color:oklch(0.4 0.1 75)}
+
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:oklch(0.85 0.06 85);margin-top:1px}
+  .stats>div{background:oklch(0.985 0.014 85);padding:12px 14px}
+  .stats .k{font-size:11.5px;color:var(--sub);margin-bottom:4px}
+  .stats .v{font-size:16px;font-weight:500}
+  .stats .v.num{font-family:var(--mono)}
+  .up{font-size:12.5px;color:var(--gold)}
+  .down{font-size:12.5px;color:oklch(0.55 0.13 25)}
+
+  figure{margin:22px 0 0}
+  figure img{display:block;width:100%;height:auto;border:1px solid var(--gold-line)}
+
+  h2{font-family:var(--serif);font-size:17px;font-weight:700;margin:24px 0 10px}
+  ul{margin:0;padding-left:20px;font-size:14.5px;line-height:1.7}
+  li{margin-bottom:8px}
+  li:last-child{margin-bottom:0}
+  .risk{font-size:13.5px;line-height:1.7;margin:18px 0 0;padding:12px 14px;background:oklch(0.97 0.03 85);border-left:3px solid var(--gold)}
+
+  .cta{margin-top:56px;border-top:2px solid var(--gold);padding-top:24px;display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap}
+  .cta .copy{flex:1 1 300px;min-width:0}
+  .cta h2{margin-top:0;font-size:19px}
+  .cta p{font-size:14.5px;line-height:1.75;margin:0 0 12px}
+  .cta .btn{display:inline-block;font-family:var(--mono);font-size:14px;font-weight:500;color:oklch(0.32 0.08 75);background:oklch(0.95 0.06 85);border:1.5px solid var(--gold);padding:10px 16px;text-decoration:none;margin-top:6px;overflow-wrap:anywhere}
+  .cta .shot{flex:0 1 200px;max-width:200px}
+  .cta .shot img{display:block;width:100%;height:auto;border-radius:10px}
+
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--gold-line);font-size:12.5px;color:var(--sub);line-height:1.7}
+  footer a{color:var(--gold)}
+
+  @media (max-width:520px){
+    main{padding:28px 16px 44px}
+    .head .tag{margin-left:0;width:100%}
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>美股軟體股 選股清單</h1>
+  <p class="lede">技術面型態突破 × 基本面利多整理 ｜ 報價日期：2026 年 8 月 7–11 日收盤 ｜ 整理日期：8 月 12 日</p>
+  <div class="rule"></div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>代號</th><th>公司</th><th>市值</th><th>收盤價</th><th>型態</th><th>頸線目標</th><th>潛在漲幅</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="sym">NOW</td>
+          <td>ServiceNow, Inc.</td>
+          <td>約 1,400 億美元</td>
+          <td class="num">124.88</td>
+          <td>上升三角形突破</td>
+          <td class="num">170.51</td>
+          <td class="pct">+36.58%</td>
+        </tr>
+        <tr>
+          <td class="sym">WDAY</td>
+          <td>Workday, Inc. Class A</td>
+          <td>約 480 億美元</td>
+          <td class="num">179.64</td>
+          <td>矩形箱型突破（約 113‒150 區間）</td>
+          <td class="num">231.72</td>
+          <td class="pct">+29.06%</td>
+        </tr>
+        <tr>
+          <td class="sym">TEAM</td>
+          <td>Atlassian Corporation Class A</td>
+          <td>約 390 億美元</td>
+          <td class="num">148.56</td>
+          <td>對稱三角形突破</td>
+          <td class="num">221.01</td>
+          <td class="pct">+48.58%</td>
+        </tr>
+        <tr>
+          <td class="sym">CTSH</td>
+          <td>Cognizant Technology Solutions Class A</td>
+          <td>約 280 億美元</td>
+          <td class="num">57.67</td>
+          <td>下降通道突破</td>
+          <td class="num">68.30</td>
+          <td class="pct">+18.42%</td>
+        </tr>
+        <tr>
+          <td class="sym">PATH</td>
+          <td>UiPath, Inc. Class A</td>
+          <td>約 80‒85 億美元</td>
+          <td class="num">15.05</td>
+          <td>上升三角形突破（頸線約 13）</td>
+          <td class="num">22.03</td>
+          <td class="pct">+46.44%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="note">說明：市值為依 8 月中旬股價概算之近似值，實際數字請以券商或 TradingView 報價為準。「頸線目標」與「潛在漲幅」取自各檔圖表上量測的型態幅度，屬技術面推估，非分析師目標價。</p>
+  <p class="note">本文件為個人研究整理，不構成投資建議；每一檔的風險段落請務必一併閱讀。</p>
+
+  <!-- NOW -->
+  <section class="stock">
+    <div class="head">
+      <span class="t">NOW</span>
+      <span class="n">ServiceNow, Inc.</span>
+      <span class="ex">NYSE</span>
+      <span class="tag">上升三角形突破</span>
+    </div>
+    <div class="stats">
+      <div><div class="k">市值</div><div class="v">約 1,400 億美元</div></div>
+      <div><div class="k">收盤價</div><div class="v num">124.88 <span class="up">+6.42%</span></div></div>
+      <div><div class="k">型態頸線目標</div><div class="v num">170.51</div></div>
+      <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+36.58%</div></div>
+    </div>
+    <figure><img src="img/now.png" alt="NOW 技術圖（上升三角形＋頸線 170.51）" width="1904" height="1156" loading="lazy" decoding="async"></figure>
+    <h2>利多與看好理由</h2>
+    <ul>
+      <li>Q2 2026 訂閱營收 38.77 億美元、年增 24.5%，總營收 39.87 億美元年增 24%，全面優於財測高標，並上調全年訂閱營收展望至 157.6‒157.8 億美元。</li>
+      <li>AI 年度合約價值（AI ACV）首次突破 10 億美元，朝年底 15 億美元目標前進；正式導入 agentic AI 的客戶數 9 個月內成長 9 倍。</li>
+      <li>cRPO 132 億美元年增 21%，單季逾百萬美元新增 ACV 的大單有 123 筆、年增近 40%，代表大型企業續約與擴充動能仍強。</li>
+      <li>管理層把定位從「工作流程」拉高到「企業 AI 控制塔」，資安與風險（AI Control Tower、Armis）成為 AI 之外的第二成長引擎。</li>
+    </ul>
+    <p class="risk">風險提醒｜股價過去一年跌幅大，市場對 AI 是否反過來侵蝕 SaaS 席次仍有疑慮；併購導致訂閱毛利率下滑、匯率也是逆風。</p>
+  </section>
+
+  <!-- WDAY -->
+  <section class="stock">
+    <div class="head">
+      <span class="t">WDAY</span>
+      <span class="n">Workday, Inc. Class A</span>
+      <span class="ex">NASDAQ</span>
+      <span class="tag">矩形箱型突破（約 113‒150 區間）</span>
+    </div>
+    <div class="stats">
+      <div><div class="k">市值</div><div class="v">約 480 億美元</div></div>
+      <div><div class="k">收盤價</div><div class="v num">179.64 <span class="up">+5.52%</span></div></div>
+      <div><div class="k">型態頸線目標</div><div class="v num">231.72</div></div>
+      <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+29.06%</div></div>
+    </div>
+    <figure><img src="img/wday.png" alt="WDAY 技術圖（113‒150 箱型突破）" width="1904" height="1160" loading="lazy" decoding="async"></figure>
+    <h2>利多與看好理由</h2>
+    <ul>
+      <li>上一季繳出五年來最佳的第一季新增訂單成長，營收與獲利雙擊敗預期，並上調全年獲利率財測，被視為落難後的轉折點。</li>
+      <li>分析師預估營收由 FY2026 的 95.5 億美元成長到 FY2031 的 158 億美元，自由現金流由 27.8 億成長至 48.7 億美元。</li>
+      <li>41 位分析師中 23 位「強力買進」，平均目標價約 186 美元；下一次財報落在 8 月下旬，是短線催化劑。</li>
+      <li>HCM 與財務管理是企業最難更換的核心系統，替換成本高，AI 反而讓 Workday 有機會做流程層的加值而非被取代。</li>
+    </ul>
+    <p class="risk">風險提醒｜7 月曾遭大摩降評至 Underweight、CLSA 給 Underperform；市場對「AI 取代 SaaS 席次計價模式」的疑慮尚未解除。</p>
+  </section>
+
+  <!-- TEAM -->
+  <section class="stock">
+    <div class="head">
+      <span class="t">TEAM</span>
+      <span class="n">Atlassian Corporation Class A</span>
+      <span class="ex">NASDAQ</span>
+      <span class="tag">對稱三角形突破</span>
+    </div>
+    <div class="stats">
+      <div><div class="k">市值</div><div class="v">約 390 億美元</div></div>
+      <div><div class="k">收盤價</div><div class="v num">148.56 <span class="down">-0.34%</span></div></div>
+      <div><div class="k">型態頸線目標</div><div class="v num">221.01</div></div>
+      <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+48.58%</div></div>
+    </div>
+    <figure><img src="img/team.png" alt="TEAM 技術圖（對稱三角形＋財報跳空）" width="1900" height="1156" loading="lazy" decoding="async"></figure>
+    <h2>利多與看好理由</h2>
+    <ul>
+      <li>最新季度營收年增 27.6% 至 17.7 億美元、調整後 EPS 1.87 美元，雙雙優於預期，財報後股價單日大漲逾 30%。</li>
+      <li>billings 年增 34.7% 至 20.2 億美元，遞延收入的領先指標同步轉強，代表企業端採購並未縮手。</li>
+      <li>成長歸因於 AI 產品 Rovo 的大規模企業導入，Jira、Confluence 既有安裝基礎成為 AI 加價銷售的天然通路。</li>
+      <li>產品線由 Jira / Confluence 延伸到 Compass、Jira Align、Focus、Guard，並與 Mattermost 合作切入國防與關鍵基礎設施的自主部署市場。</li>
+    </ul>
+    <p class="risk">風險提醒｜股價自高點腰斬過，波動極大；本次是財報跳空後的高位型態，追價風險與回測缺口風險都要算進去。</p>
+  </section>
+
+  <!-- CTSH -->
+  <section class="stock">
+    <div class="head">
+      <span class="t">CTSH</span>
+      <span class="n">Cognizant Technology Solutions Class A</span>
+      <span class="ex">NASDAQ</span>
+      <span class="tag">下降通道突破</span>
+    </div>
+    <div class="stats">
+      <div><div class="k">市值</div><div class="v">約 280 億美元</div></div>
+      <div><div class="k">收盤價</div><div class="v num">57.67 <span class="up">+1.37%</span></div></div>
+      <div><div class="k">型態頸線目標</div><div class="v num">68.30</div></div>
+      <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+18.42%</div></div>
+    </div>
+    <figure><img src="img/ctsh.png" alt="CTSH 技術圖（下降通道突破）" width="1898" height="1152" loading="lazy" decoding="async"></figure>
+    <h2>利多與看好理由</h2>
+    <ul>
+      <li>Q2 2026 營收年增約 4.1%、調整後營益率擴張，公司上調全年 EPS 財測，財報後股價一度大漲逾 20%。</li>
+      <li>單季簽下 7 筆大型合約，接單動能穩健；並宣布與 The Andover Companies 的五年期全企業合作案。</li>
+      <li>成立 EMEA AI 專責事業單位，協助歐非中東客戶把 AI 從試點推向規模化落地；另以 6 億美元收購 Astreya Partners。</li>
+      <li>估值是五檔中最低的一檔，本益比約 12 倍，且有每股 0.33 美元的季配息與持續買回，屬於防禦性配置。</li>
+    </ul>
+    <p class="risk">風險提醒｜營收成長僅約 5%，遠低於 IT 產業預估的 13%；客戶對非必要 IT 支出仍保守，且 AI 有可能反噬人力外包的計費模式。</p>
+  </section>
+
+  <!-- PATH -->
+  <section class="stock">
+    <div class="head">
+      <span class="t">PATH</span>
+      <span class="n">UiPath, Inc. Class A</span>
+      <span class="ex">NYSE</span>
+      <span class="tag">上升三角形突破（頸線約 13）</span>
+    </div>
+    <div class="stats">
+      <div><div class="k">市值</div><div class="v">約 80‒85 億美元</div></div>
+      <div><div class="k">收盤價</div><div class="v num">15.05 <span class="up">+7.50%</span></div></div>
+      <div><div class="k">型態頸線目標</div><div class="v num">22.03</div></div>
+      <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+46.44%</div></div>
+    </div>
+    <figure><img src="img/path.png" alt="PATH 技術圖（上升三角形＋頸線約 13）" width="1898" height="1150" loading="lazy" decoding="async"></figure>
+    <h2>利多與看好理由</h2>
+    <ul>
+      <li>FY2027 Q1 營收年增 17% 至 4.18 億美元，ARR 年增 12% 至 19 億美元，non-GAAP 營益率達 22%，並首度轉為 GAAP 獲利。</li>
+      <li>自由現金流 1.29 億美元、年增 22%，毛利率維持 80% 以上，帳上現金充裕且持續執行庫藏股。</li>
+      <li>agentic 自動化平台 Maestro 是核心題材，CEO 稱代理型產品正「從試點走向正式生產」；並購 WorkFusion 補強金融業 AI agent。</li>
+      <li>與 Microsoft、OpenAI、Google、NVIDIA 的整合，加上取得杜拜資安認證，打開政府與受監管產業的自主部署商機。</li>
+    </ul>
+    <p class="risk">風險提醒｜市值最小、波動最大。分析師共識偏 Hold，平均目標價約 13.4‒13.8 美元，反而低於現價；淨續約率 109% 偏低，AI 變現尚未被證明。</p>
+  </section>
+
+  <section class="cta">
+    <div class="copy">
+      <h2>加入 Telegram 頻道！</h2>
+      <p>加入這個 Telegram 頻道！有好的進出場時機時，我會第一時間在 Telegram 內通知。</p>
+      <p>只要註冊 LBank 交易所（只需一分鐘即可完成註冊），就可以免費加入這個頻道，還會加碼贈送價值 100 美元的交易指標！</p>
+      <a class="btn" href="https://t.me/acssun_bot" rel="noopener">https://t.me/acssun_bot</a>
+    </div>
+    <div class="shot">
+      <img src="img/telegram.jpg" alt="Telegram 頻道截圖" width="440" height="954" loading="lazy" decoding="async">
+    </div>
+  </section>
+
+  <footer>
+    本頁為個人研究整理，不構成投資建議，請自行判斷並承擔風險。<br>
+    © 2026 <a href="https://btcto1m.com">BTCto1M LLC</a>
+  </footer>
+
+</main>
+</body>
+</html>
