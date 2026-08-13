@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>分批進場怎麼分：一季的錢，每天買一點｜BTCto1M</title>
+<meta name="description" content="把一筆錢切成三到四個月，等指標到便宜區才開始，每天買一點。附四種分批方式對照與六題自我檢查。個人研究整理，不構成投資建議。">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="BTCto1M">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="分批進場怎麼分：一季的錢，每天買一點">
+<meta property="og:description" content="等指標到便宜區才開始，把一季的錢每天買一點。附四種分批方式對照與六題自我檢查。">
+<meta property="og:url" content="https://btcto1m.com/20260813dca/">
+<meta property="og:image" content="https://btcto1m.com/20260813dca/img/telegram-channel.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="分批進場怎麼分：一季的錢，每天買一點">
+<meta name="twitter:description" content="等指標到便宜區才開始，把一季的錢每天買一點。附四種分批方式對照與六題自我檢查。">
+<meta name="twitter:image" content="https://btcto1m.com/20260813dca/img/telegram-channel.jpg">
+<link rel="canonical" href="https://btcto1m.com/20260813dca/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --gold:oklch(0.55 0.15 75);
+    --gold-soft:oklch(0.96 0.04 85);
+    --gold-line:oklch(0.9 0.03 85);
+    --ink:oklch(0.24 0.008 250);
+    --sub:oklch(0.5 0.01 250);
+    --sans:'Noto Sans TC',-apple-system,'PingFang TC','Helvetica Neue',Arial,sans-serif;
+    --serif:'Noto Serif TC',Georgia,'Songti TC','Times New Roman',serif;
+    --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:var(--sans);color:var(--ink);background:#fff;overflow-wrap:break-word}
+  a{color:oklch(0.45 0.13 75)}
+  a:hover{color:oklch(0.35 0.1 75)}
+  main{max-width:860px;margin:0 auto;padding:40px 20px 56px}
+
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(26px,6vw,34px);line-height:1.25;margin:0 0 10px;letter-spacing:-0.01em}
+  .lede{font-size:15px;line-height:1.6;margin:0;color:var(--sub)}
+  .rule{height:2px;background:var(--gold);margin:20px 0 24px}
+
+  /* 摘要表：手機上整塊橫向捲動，頁面本身不橫向捲 */
+  .table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{width:100%;min-width:640px;border-collapse:collapse;font-size:12.5px}
+  th{padding:8px;background:var(--gold-soft);border-bottom:1.5px solid var(--gold);font-weight:700;text-align:left;white-space:nowrap}
+  td{padding:9px 8px;border-bottom:1px solid var(--gold-line);vertical-align:top}
+  .num{font-family:var(--mono)}
+  .sym{font-family:var(--mono);font-weight:500}
+  .pct{font-family:var(--mono);font-weight:500;text-align:right;color:var(--gold);white-space:nowrap}
+  table.calc th:last-child{text-align:right}
+
+  .note{font-size:12.5px;line-height:1.65;margin:18px 0 6px;color:var(--sub)}
+  .note:last-of-type{margin-bottom:0}
+
+  section.item{margin-top:52px}
+  .head{display:flex;align-items:baseline;gap:10px 14px;flex-wrap:wrap;border-bottom:2px solid var(--gold);padding-bottom:10px}
+  .head .t{font-family:var(--serif);font-size:clamp(20px,5.5vw,25px);font-weight:700}
+  .head .n{font-size:13px;color:var(--sub);letter-spacing:0.02em}
+  .head .tag{margin-left:auto;font-size:13px;font-weight:500;padding:4px 10px;background:var(--gold-soft);color:oklch(0.4 0.1 75)}
+
+  .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:oklch(0.85 0.06 85);margin-top:1px}
+  .stats>div{background:oklch(0.985 0.014 85);padding:12px 14px}
+  .stats .k{font-size:11.5px;color:var(--sub);margin-bottom:4px}
+  .stats .v{font-size:16px;font-weight:500}
+  .stats .v.num{font-family:var(--mono)}
+  .stats .sub{font-size:11px;color:var(--sub);margin-top:4px;line-height:1.45}
+
+  .intro{font-size:14.5px;line-height:1.75;margin:20px 0 0;padding:14px 16px;background:oklch(0.98 0.006 250);border:1px solid var(--gold-line)}
+  .intro b{font-weight:700;font-family:var(--serif)}
+
+  h2{font-family:var(--serif);font-size:17px;font-weight:700;margin:24px 0 10px}
+  ul{margin:0;padding-left:20px;font-size:14.5px;line-height:1.7}
+  li{margin-bottom:8px}
+  li:last-child{margin-bottom:0}
+  /* 藍框＝中性補充事實；金框＝風險提醒。顏色有意義，不要統一 */
+  .fact{font-size:13.5px;line-height:1.7;margin:18px 0 0;padding:12px 14px;background:oklch(0.975 0.012 250);border-left:3px solid oklch(0.55 0.08 250)}
+  .fact b{font-weight:700}
+  .risk{font-size:13.5px;line-height:1.7;margin:12px 0 0;padding:12px 14px;background:oklch(0.97 0.03 85);border-left:3px solid var(--gold)}
+
+  /* 自我檢查選擇題。零 JS，答案就寫在選項底下，讀者心裡選完直接對照 */
+  .q{margin-top:24px;padding-top:20px;border-top:1px solid var(--gold-line)}
+  .q:first-of-type{border-top:0;padding-top:0}
+  .q h3{font-family:var(--serif);font-size:16px;font-weight:700;margin:0 0 10px;line-height:1.5}
+  .q ol{margin:0;padding-left:24px;list-style:upper-alpha;font-size:14.5px;line-height:1.7}
+  .q ol li{margin-bottom:4px;padding-left:2px}
+  .q ol li::marker{font-family:var(--mono);font-weight:500;color:var(--gold)}
+  /* 解讀收合。用原生 details/summary，不需要 JS */
+  .q .ans{margin:14px 0 0}
+  .q .ans>summary{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:7px 14px;border:1px solid var(--gold-line);border-radius:999px;
+    font-size:13px;font-weight:500;color:oklch(0.4 0.1 75);background:var(--gold-soft);
+    cursor:pointer;list-style:none;user-select:none;
+  }
+  .q .ans>summary::-webkit-details-marker{display:none}
+  .q .ans>summary::after{content:'▸';font-size:11px;transition:transform .15s ease}
+  .q .ans[open]>summary::after{transform:rotate(90deg)}
+  .q .ans>summary:hover{background:oklch(0.93 0.05 85)}
+  .q .ans>summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .q .ans .body{font-size:13px;line-height:1.7;margin:12px 0 0;padding:10px 0 10px 14px;border-left:2px solid var(--gold-line);color:var(--sub)}
+  .q .ans b{color:var(--ink);font-weight:700}
+  .q .ans .pick{font-family:var(--mono);font-weight:500;color:var(--gold)}
+
+  .cta{margin-top:56px;border-top:2px solid var(--gold);padding-top:24px;display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap}
+  .cta .copy{flex:1 1 300px;min-width:0}
+  .cta h2{margin-top:0;font-size:19px}
+  .cta p{font-size:14.5px;line-height:1.75;margin:0 0 12px}
+  .cta .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    margin-top:6px;padding:16px 30px;
+    font-size:17px;font-weight:700;line-height:1;
+    color:#fff;background:var(--gold);border:0;border-radius:999px;
+    text-decoration:none;cursor:pointer;
+    box-shadow:0 4px 14px oklch(0.55 0.15 75/.35);
+    transition:background .12s ease,transform .12s ease,box-shadow .12s ease;
+  }
+  .cta .btn:hover{color:#fff;background:oklch(0.48 0.15 75);transform:translateY(-2px);box-shadow:0 8px 22px oklch(0.55 0.15 75/.45)}
+  .cta .btn:active{transform:translateY(0);box-shadow:0 3px 10px oklch(0.55 0.15 75/.4)}
+  .cta .btn:focus-visible{outline:3px solid oklch(0.45 0.13 75);outline-offset:3px}
+  .cta .btn .arrow{font-size:19px;line-height:1}
+  .cta .btnurl{margin:12px 0 0;font-family:var(--mono);font-size:12px;color:var(--sub);overflow-wrap:anywhere}
+  .cta .shot{flex:0 1 200px;max-width:200px}
+  .cta .shot img{display:block;width:100%;height:auto;border-radius:10px}
+
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--gold-line);font-size:12.5px;color:var(--sub);line-height:1.7}
+  footer a{color:var(--gold)}
+
+  @media (max-width:640px){
+    .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  @media (max-width:520px){
+    main{padding:28px 16px 44px}
+    .head .tag{margin-left:0;width:100%}
+    .cta .btn{width:100%}
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>分批進場怎麼分</h1>
+  <p class="lede">一季的錢，每天買一點——但先等指標告訴你「現在算便宜」。方法整理，無時效性行情數據；不構成投資建議。</p>
+  <div class="rule"></div>
+
+  <p class="intro"><b>先講結論</b>｜分批的目的<b>不是</b>買到最低點，是把成本<b>平滑化</b>——成本平滑化的意思是：你不是用某一天的價格買進，而是用這段期間的<b>平均價</b>買進。你放棄了「剛好買在最低點」的可能，換到的是「不會把全部的錢押在錯的那一天」。而在相對低的區間才啟動分批，等於是把這條平均線整條往下拉。</p>
+
+  <!-- ── 主方法 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">主方法：一季的錢，每天買一點</span>
+      <span class="n">我自己在用的</span>
+      <span class="tag">核心</span>
+    </div>
+
+    <div class="stats">
+      <div><div class="k">一次投入多少錢</div><div class="v">一季的預算</div><div class="sub">未來 3–4 個月要投入的總額</div></div>
+      <div><div class="k">切成幾次</div><div class="v num">60–80</div><div class="sub">美股：交易日<br>BTC：90–120 天</div></div>
+      <div><div class="k">執行頻率</div><div class="v">每天</div><div class="sub">美股是每個交易日<br>同一時間、同一金額</div></div>
+      <div><div class="k">單日金額</div><div class="v">總額 ÷ 天數</div><div class="sub">固定不變，不看盤加減</div></div>
+      <div><div class="k">啟動條件</div><div class="v num">KD &lt; 20</div><div class="sub">沒到就不啟動</div></div>
+      <div><div class="k">中途跌了怎麼辦</div><div class="v">照買</div><div class="sub">跌是這套方法在賺的東西</div></div>
+    </div>
+
+    <h2>先搞清楚：「三個月」要除以幾</h2>
+    <ul>
+      <li><b>美股一個月大約只有 20 個交易日。</b>週末不開盤，還有國定假日。所以三個月是 <b>60 個交易日</b>、四個月是 <b>80 個</b>——不是 90 天、120 天。拿 90 去除，你實際會買到四個半月，尾巴那一段早就不是當初的便宜區了。</li>
+      <li><b>BTC 是 365 天無休，才是真的除以天數。</b>三個月就是 <b>90 天</b>，四個月就是 <b>120 天</b>，週末照買。</li>
+      <li><b>兩邊都買的人，用「幾個月」對齊，不要用「幾天」對齊。</b>目標是三、四個月內買完，除數各自算各自的。</li>
+    </ul>
+
+    <h2>每次到底買多少：直接查表</h2>
+
+    <div class="table-wrap">
+      <table class="calc">
+        <thead>
+          <tr><th>這一季的預算</th><th>美股 3 個月<br>÷ 60 交易日</th><th>美股 4 個月<br>÷ 80 交易日</th><th>BTC 3 個月<br>÷ 90 天</th><th>BTC 4 個月<br>÷ 120 天</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="sym">30,000</td><td class="num">500</td><td class="num">375</td><td class="num">333</td><td class="pct">250</td></tr>
+          <tr><td class="sym">100,000</td><td class="num">1,667</td><td class="num">1,250</td><td class="num">1,111</td><td class="pct">833</td></tr>
+          <tr><td class="sym">300,000</td><td class="num">5,000</td><td class="num">3,750</td><td class="num">3,333</td><td class="pct">2,500</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">說明：單次金額＝預算 ÷ 次數，四捨五入到整數。交易日以每月 20 日估算（一年約 250 個交易日，扣掉週末與假日）；實際會因當年假期少幾天，差幾天不影響結論。幣別不影響算法，換成美元一樣除。如果你的標的有最低下單金額（部分券商、或交易所的最小下單量），把「每個交易日」改成「每週一次」，次數同步改成 13 次（3 個月）或 17 次（4 個月），邏輯完全不變。</p>
+
+    <h2>為什麼是一季，不是一次買完、也不是攤一整年</h2>
+    <ul>
+      <li><b>一次買完，你等於把三個月的判斷全押在一天上。</b>那一天剛好是這段期間的最高價，機率不高，但真的發生你會很久都翻不了身——而且你自己也知道有這個風險，所以會遲遲不敢按下去，最後變成什麼都沒買。</li>
+      <li><b>攤一整年，便宜區早就結束了。</b>你是因為「現在相對便宜」才開始買的，這個判斷通常撐不了十二個月。買到後面，你其實是在用一個過期的理由買進，價格早就不是當初讓你心動的價格。</li>
+      <li><b>三到四個月剛好蓋住一次像樣的回檔。</b>回檔就是從高點往下修正的那一段。多數回檔的落底過程要幾週到幾個月，用一季去接，接得到底部區間，也不至於拖到訊號失效。</li>
+      <li><b>每天買，是為了讓你不用做決定。</b>改成「跌多才多買」聽起來更聰明，但那要求你每天判斷、每天有紀律。固定金額、固定時間，設好自動扣款或定期定額功能，執行率才會是 100%。<b>一套 80 分但你做得到的方法，勝過 100 分但你只做兩週的方法。</b></li>
+      <li><b>買完就停，不要順手續攤。</b>一季結束就是結束，重新評估、重新等訊號。不然這套方法會退化成「無腦一直買」，你會在最貴的時候買進最多。</li>
+    </ul>
+
+    <p class="fact"><b>一個常見誤會</b>｜分批不會讓你的報酬變高，它讓你的<b>結果變穩</b>。如果標的從你開始買的那天就一路漲，一次買完的報酬一定比分批高——這是分批的成本，事先要認。你換到的是：萬一它先跌了三個月，你不會全部套在第一天，而且還買到了更多便宜的部位。</p>
+  </section>
+
+  <!-- ── 啟動條件 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">啟動條件：怎麼判斷「現在算便宜」</span>
+      <span class="n">訊號沒到就不開始</span>
+      <span class="tag">前置</span>
+    </div>
+
+    <h2>我自己看 KD，低於 20 才啟動</h2>
+    <ul>
+      <li><b>KD 是在講「現在的價格站在最近這段區間的哪個位置」。</b>它把最近一段期間的最高價、最低價拉出來，看今天的收盤價落在哪裡，換算成 0 到 100 的分數。接近 100 代表貼著這段期間的高點，接近 0 代表貼著低點。K 是快線、D 是慢線（D 是 K 平滑過的版本，反應比較鈍）。</li>
+      <li><b>我的規則：KD 低於 20，就視為進到相對便宜區，開始執行。</b>低於 20 表示現在的價格靠近這段期間的下緣。這不是預測，只是一個「相對位置便宜」的客觀描述。</li>
+      <li><b>日線、週線都可以看，差別在節奏。</b>日線訊號多、來得快，一年可能出現好幾次，適合預算比較小、想常常有機會進場的人；週線一次涵蓋的區間長很多，訊號少但每次都比較有份量，跟「要買三、四個月」的節奏更合。<b>我的建議是用週線決定要不要啟動，用日線決定哪天開始扣。</b></li>
+      <li><b>你的看盤軟體裡本來就有。</b>TradingView、券商 App、交易所 App 的指標清單裡找 KD 或 Stochastic（KD 的英文名），加上去就會顯示，參數用預設的 9、3、3 即可，不用調。</li>
+    </ul>
+
+    <h2>除了 KD，這三個也能用</h2>
+    <ul>
+      <li><b>長期均線的相對位置。</b>均線就是過去 N 期收盤價的平均。看價格有沒有跌到 200 週均線（BTC 常用）或 200 日均線（美股常用）附近。<b>限制：</b>它只告訴你「比長期平均便宜」，強勢的標的可能好幾年都碰不到，你會等到天荒地老。</li>
+      <li><b>距離前高的回檔幅度。</b>設一個門檻，例如從歷史高點回落到只要再漲 40% 就能回去的位置（也就是回檔約 29%），就當作進場區。<b>限制：</b>下跌 50% 之後再跌 50% 是完全可能的，這個標準無法分辨「便宜」與「這家公司出事了」。</li>
+      <li><b>市場情緒指標。</b>恐懼貪婪指數（Fear &amp; Greed Index）進到極度恐懼，或 BTC 的 MVRV（市值 ÷ 所有幣的平均買入成本，低於 1 代表市場整體處於帳面虧損）偏低。<b>限制：</b>情緒可以更恐懼、更久，它給你的是區間不是時點——所以更要分批，不能一次押。</li>
+      <li><b>挑一個就好，不要三個都看。</b>指標愈多，愈容易「總有一個沒到」，然後永遠不動手。先選一個寫下來，之後再改。</li>
+    </ul>
+
+    <p class="risk">風險提醒｜指標只是<b>機率上比較好的起點</b>，不是保證。KD 低於 20 之後繼續跌是常態，甚至可以在低檔待上好幾個月——這正是我們要分成三、四個月慢慢買的原因，而不是訊號一到就全押。反過來也要認：<b>訊號沒到就是不買，而你有可能整段行情都在場外看著。</b>這是這套規則的代價，接受不了就不要用它。</p>
+  </section>
+
+  <!-- ── 其他分批方式 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">其他分批方式</span>
+      <span class="n">四種對照，挑你做得到的那個</span>
+      <span class="tag">選項</span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>方式</th><th>怎麼做</th><th>適合誰</th><th>要付出的代價</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="sym">定期定額</td>
+            <td>每月固定日期、固定金額，不看價格、不設終點，一直買下去。</td>
+            <td>沒時間看盤、也不想判斷的人。設定一次就結束。</td>
+            <td>貴的時候照買。長期下來成本會是「市場平均」，不會比平均好。</td>
+          </tr>
+          <tr>
+            <td class="sym">季度每日<br>（本頁主方法）</td>
+            <td>等 KD 低於 20 才啟動，把一季預算除以三到四個月的次數（美股 60–80 個交易日、BTC 90–120 天），每次買固定金額，買完就停。</td>
+            <td>願意等訊號、想把成本壓在相對低檔的人。</td>
+            <td>要等，而且可能等很久。訊號不來的期間，你的錢是閒著的。</td>
+          </tr>
+          <tr>
+            <td class="sym">逢跌加碼</td>
+            <td>先設好級距，例如每再跌 10% 就投入一筆，跌愈多投愈多。</td>
+            <td>手上有一筆現金、想把子彈留給更深的跌幅的人。</td>
+            <td>沒跌就完全沒買到。而且真的一路跌下去時，你要有膽子照表操課。</td>
+          </tr>
+          <tr>
+            <td class="sym">分層掛單</td>
+            <td>把目標區間切成幾層價格，每層都預先掛好買單，成交了就成交，沒成交就掛著。</td>
+            <td>用交易所或有掛單功能的券商、不想每天盯的人。</td>
+            <td>要先想清楚每層的價格和金額。掛太低整組不成交，等於沒進場。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">四種可以混。常見組合是「定期定額當底、季度每日當加碼」：不管行情如何，每月固定買一份當基本部位；等 KD 進到便宜區，再把額外那筆錢用季度每日的方式打進去。這樣你不會完全錯過行情，也保留了在低檔多買的能力。</p>
+  </section>
+
+  <!-- ── 自我檢查選擇題 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">先答這六題</span>
+      <span class="n">答完就不會再想抓最低點</span>
+      <span class="tag">自我檢查</span>
+    </div>
+
+    <p class="note">在心裡選好答案，再點開「看解讀」。先看解讀會影響你的答案，那這六題就白做了。</p>
+
+    <div class="q">
+      <h3>1. 如果從你買進的那天起，它再跌 30%，你會？</h3>
+      <ol>
+        <li>照原訂計畫繼續每天買</li>
+        <li>先停手，看看再說</li>
+        <li>睡不著，想全部賣掉</li>
+      </ol>
+      <details class="ans"><summary>看解讀</summary>
+      <p class="body">選 <span class="pick">A</span>｜部位大小是對的，繼續。<br>
+      選 <span class="pick">B</span> 或 <span class="pick">C</span>｜<b>不是你的判斷有問題，是你的部位開太大了。</b>把每次的金額砍半，總預算砍半，重新問自己這一題。答案變成 A 為止——那個金額才是你真正承受得起的金額。</p>
+      </details>
+    </div>
+
+    <div class="q">
+      <h3>2. 如果它從今天起頭也不回一路漲，而你手上一股都沒有——</h3>
+      <ol>
+        <li>可以接受，本來就不是每一波都要參與</li>
+        <li>會很不甘心，但不至於做傻事</li>
+        <li>會忍不住追高</li>
+      </ol>
+      <details class="ans"><summary>看解讀</summary>
+      <p class="body">選 <span class="pick">A</span>｜你適合嚴格等訊號。<br>
+      選 <span class="pick">B</span> 或 <span class="pick">C</span>｜<b>你等待的心理成本比你以為的高。</b>純等訊號的方法你撐不住，最後一定會在最貴的時候破功。改用混合：先用定期定額買一小份（例如總預算的三成）壓住不甘心，剩下七成留給訊號。</p>
+      </details>
+    </div>
+
+    <div class="q">
+      <h3>3. 這筆錢，你多久之內會用到？</h3>
+      <ol>
+        <li>三年以上都用不到</li>
+        <li>一到三年之間可能會用到</li>
+        <li>一年內就要用（房租、學費、周轉）</li>
+      </ol>
+      <details class="ans"><summary>看解讀</summary>
+      <p class="body">選 <span class="pick">A</span>｜可以進場。<br>
+      選 <span class="pick">B</span>｜只投入其中一部分，並且要接受用錢那天可能是虧的。<br>
+      選 <span class="pick">C</span>｜<b>不要進場。</b>再好的方法都救不了「被迫在低點賣出」。這種錢留現金，這一題沒有討論空間。</p>
+      </details>
+    </div>
+
+    <div class="q">
+      <h3>4. 你打算抱多久？</h3>
+      <ol>
+        <li>三年以上</li>
+        <li>一年左右</li>
+        <li>看情況，隨時可能賣</li>
+      </ol>
+      <details class="ans"><summary>看解讀</summary>
+      <p class="body">選 <span class="pick">A</span>｜<b>那三個月內的進場價差，對你最後的報酬影響很小。</b>你為了那幾個百分點焦慮了好幾週，值得嗎？直接開始執行。<br>
+      選 <span class="pick">B</span>｜進場點的重要性上升，訊號要抓得更嚴。<br>
+      選 <span class="pick">C</span>｜你要的其實是短線交易，那需要的是停損紀律，分批幫不了你。</p>
+      </details>
+    </div>
+
+    <div class="q">
+      <h3>5. 你現在遲遲不動手，是在等什麼？</h3>
+      <ol>
+        <li>等我設定的指標到條件</li>
+        <li>等更便宜的價格</li>
+        <li>等「感覺安全一點」再說</li>
+      </ol>
+      <details class="ans"><summary>看解讀</summary>
+      <p class="body">選 <span class="pick">A</span>｜這是有規則的等待，很好。<br>
+      選 <span class="pick">B</span>｜多便宜才算便宜？<b>講不出一個具體數字，就不是在等，是在拖。</b>現在就寫下來。<br>
+      選 <span class="pick">C</span>｜<b>注意，這跟 B 是互斥的兩件事。</b>市場讓人感覺安全的時候，通常已經漲一段了；真正便宜的時候，感覺一定很糟。你不可能同時等到「便宜」和「安心」。</p>
+      </details>
+    </div>
+
+    <div class="q">
+      <h3>6. 上一次你說「再等等」，後來實際發生了什麼？</h3>
+      <ol>
+        <li>真的等到更低的價格，也真的買了</li>
+        <li>沒等到，後來用更高的價格追進去</li>
+        <li>忘了這件事，到現在根本沒買</li>
+      </ol>
+      <details class="ans"><summary>看解讀</summary>
+      <p class="body">選 <span class="pick">A</span>｜恭喜，但請誠實回想：這是第幾次成功？<br>
+      選 <span class="pick">B</span> 或 <span class="pick">C</span>｜<b>你缺的不是判斷力，是一套不用判斷也會自動執行的規則。</b>這正是本頁在講的東西——把決定寫成規則，剩下的交給執行。</p>
+      </details>
+    </div>
+
+    <p class="fact"><b>這六題的重點</b>｜不是要你答對，是要你發現：<b>大部分人卡住的地方不是「買在哪個價格」，而是部位太大、錢的期限不對、或根本沒有規則。</b>而分批的價值就在這裡——它讓你不必每題都答對，也不會出局。</p>
+  </section>
+
+  <!-- ── 結尾行動區 ── -->
+  <section class="cta">
+    <div class="copy">
+      <h2>想看我實際的操作紀錄</h2>
+      <p>這頁講的是方法。我什麼時候看到 KD 進到便宜區、實際怎麼分、買了什麼，會直接發在 Telegram 頻道上。</p>
+      <p>免費，不用留資料，點下去就進得來。裡面不推薦個股、不代操，只是我自己的紀錄跟研究。</p>
+      <a class="btn" href="https://t.me/acssun_bot" rel="noopener">加入 Telegram 頻道 <span class="arrow" aria-hidden="true">→</span></a>
+      <p class="btnurl">https://t.me/acssun_bot</p>
+    </div>
+    <div class="shot">
+      <img src="img/telegram-channel.jpg" alt="Telegram 頻道畫面截圖" width="203" height="440" loading="lazy" decoding="async">
+    </div>
+  </section>
+
+  <footer>
+    本頁為個人研究整理，不構成投資建議，請自行判斷並承擔風險。文中的天數、金額與指標數值都是我自己在用的設定，不是唯一解，也不保證任何結果。<br>
+    © 2026 <a href="https://btcto1m.com">BTCto1M LLC</a>
+  </footer>
+
+</main>
+</body>
+</html>
