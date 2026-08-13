@@ -53,7 +53,6 @@
   .num{font-family:var(--mono)}
   .sym{font-family:var(--mono);font-weight:500}
   .pct{font-family:var(--mono);font-weight:500;text-align:right;color:var(--gold);white-space:nowrap}
-  .off{font-family:var(--mono);font-weight:500;text-align:right;color:oklch(0.5 0.13 25);white-space:nowrap}
   th:last-child{text-align:right}
 
   .note{font-size:12.5px;line-height:1.65;margin:18px 0 6px;color:var(--sub)}
@@ -71,7 +70,6 @@
   .stats .k{font-size:11.5px;color:var(--sub);margin-bottom:4px}
   .stats .v{font-size:16px;font-weight:500}
   .stats .v.num{font-family:var(--mono)}
-  .stats .v .dn{color:oklch(0.5 0.13 25)}
   .stats .sub{font-size:11px;color:var(--sub);margin-top:4px;line-height:1.45}
   .up{font-size:12.5px;color:var(--gold)}
   .down{font-size:12.5px;color:oklch(0.55 0.13 25)}
@@ -93,7 +91,20 @@
   .cta .copy{flex:1 1 300px;min-width:0}
   .cta h2{margin-top:0;font-size:19px}
   .cta p{font-size:14.5px;line-height:1.75;margin:0 0 12px}
-  .cta .btn{display:inline-block;font-family:var(--mono);font-size:14px;font-weight:500;color:oklch(0.32 0.08 75);background:oklch(0.95 0.06 85);border:1.5px solid var(--gold);padding:10px 16px;text-decoration:none;margin-top:6px;overflow-wrap:anywhere}
+  .cta .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    margin-top:6px;padding:16px 30px;
+    font-size:17px;font-weight:700;line-height:1;
+    color:#fff;background:var(--gold);border:0;border-radius:999px;
+    text-decoration:none;cursor:pointer;
+    box-shadow:0 4px 14px oklch(0.55 0.15 75/.35);
+    transition:background .12s ease,transform .12s ease,box-shadow .12s ease;
+  }
+  .cta .btn:hover{color:#fff;background:oklch(0.48 0.15 75);transform:translateY(-2px);box-shadow:0 8px 22px oklch(0.55 0.15 75/.45)}
+  .cta .btn:active{transform:translateY(0);box-shadow:0 3px 10px oklch(0.55 0.15 75/.4)}
+  .cta .btn:focus-visible{outline:3px solid oklch(0.45 0.13 75);outline-offset:3px}
+  .cta .btn .arrow{font-size:19px;line-height:1}
+  .cta .btnurl{margin:12px 0 0;font-family:var(--mono);font-size:12px;color:var(--sub);overflow-wrap:anywhere}
   .cta .shot{flex:0 1 200px;max-width:200px}
   .cta .shot img{display:block;width:100%;height:auto;border-radius:10px}
 
@@ -106,6 +117,7 @@
   @media (max-width:520px){
     main{padding:28px 16px 44px}
     .head .tag{margin-left:0;width:100%}
+    .cta .btn{width:100%}
   }
 </style>
 </head>
@@ -120,7 +132,7 @@
     <table>
       <thead>
         <tr>
-          <th>代號</th><th>公司</th><th>市值</th><th>收盤價</th><th>歷史高點</th><th>距高點</th><th>型態</th><th>頸線目標</th><th>潛在漲幅</th>
+          <th>代號</th><th>公司</th><th>市值</th><th>收盤價</th><th>歷史高點</th><th>回到高點需</th><th>型態</th><th>頸線目標</th><th>潛在漲幅</th>
         </tr>
       </thead>
       <tbody>
@@ -130,7 +142,7 @@
           <td>約 1,400 億美元</td>
           <td class="num">124.88</td>
           <td class="num">239.62</td>
-          <td class="off">-47.9%</td>
+          <td class="pct">+91.9%</td>
           <td>上升三角形突破</td>
           <td class="num">170.51</td>
           <td class="pct">+36.58%</td>
@@ -141,7 +153,7 @@
           <td>約 480 億美元</td>
           <td class="num">179.64</td>
           <td class="num">311.28</td>
-          <td class="off">-42.3%</td>
+          <td class="pct">+73.3%</td>
           <td>矩形箱型突破（約 113‒150 區間）</td>
           <td class="num">231.72</td>
           <td class="pct">+29.06%</td>
@@ -152,7 +164,7 @@
           <td>約 390 億美元</td>
           <td class="num">148.56</td>
           <td class="num">483.13</td>
-          <td class="off">-69.3%</td>
+          <td class="pct">+225.2%</td>
           <td>對稱三角形突破</td>
           <td class="num">221.01</td>
           <td class="pct">+48.58%</td>
@@ -163,7 +175,7 @@
           <td>約 280 億美元</td>
           <td class="num">57.67</td>
           <td class="num">93.47</td>
-          <td class="off">-38.3%</td>
+          <td class="pct">+62.1%</td>
           <td>下降通道突破</td>
           <td class="num">68.30</td>
           <td class="pct">+18.42%</td>
@@ -174,7 +186,7 @@
           <td>約 80‒85 億美元</td>
           <td class="num">15.05</td>
           <td class="num">90.00</td>
-          <td class="off">-83.3%</td>
+          <td class="pct">+498.0%</td>
           <td>上升三角形突破（頸線約 13）</td>
           <td class="num">22.03</td>
           <td class="pct">+46.44%</td>
@@ -184,7 +196,7 @@
   </div>
 
   <p class="note">說明：市值為依 8 月中旬股價概算之近似值，實際數字請以券商或 TradingView 報價為準。「頸線目標」與「潛在漲幅」取自各檔圖表上量測的型態幅度，屬技術面推估，非分析師目標價。</p>
-  <p class="note">「歷史高點」為掛牌以來的<b>盤中最高價</b>，「距高點」為本表收盤價相對該高點的跌幅。NOW 因 2025 年 12 月執行 5 股換 1 股分割，高點已還原為分割後價格（原始盤中高點 1,198.09 ÷ 5 = 239.62）。</p>
+  <p class="note">「歷史高點」為掛牌以來的<b>盤中最高價</b>，「回到高點需」為由本表收盤價漲回該高點所需的漲幅。NOW 因 2025 年 12 月執行 5 股換 1 股分割，高點已還原為分割後價格（原始盤中高點 1,198.09 ÷ 5 = 239.62）。</p>
   <p class="note">本文件為個人研究整理，不構成投資建議；每一檔的風險段落請務必一併閱讀。</p>
 
   <!-- NOW -->
@@ -199,7 +211,7 @@
       <div><div class="k">市值</div><div class="v">約 1,400 億美元</div></div>
       <div><div class="k">收盤價</div><div class="v num">124.88 <span class="up">+6.42%</span></div></div>
       <div><div class="k">歷史高點（盤中）</div><div class="v num">239.62</div><div class="sub">2025/01/28 · 已還原 5:1 分割</div></div>
-      <div><div class="k">距歷史高點</div><div class="v num"><span class="dn">-47.9%</span></div><div class="sub">回到高點需 +91.9%</div></div>
+      <div><div class="k">回到歷史高點需</div><div class="v num" style="color:var(--gold)">+91.9%</div></div>
       <div><div class="k">型態頸線目標</div><div class="v num">170.51</div></div>
       <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+36.58%</div></div>
     </div>
@@ -234,7 +246,7 @@
       <div><div class="k">市值</div><div class="v">約 480 億美元</div></div>
       <div><div class="k">收盤價</div><div class="v num">179.64 <span class="up">+5.52%</span></div></div>
       <div><div class="k">歷史高點（盤中）</div><div class="v num">311.28</div><div class="sub">2024/02/26</div></div>
-      <div><div class="k">距歷史高點</div><div class="v num"><span class="dn">-42.3%</span></div><div class="sub">回到高點需 +73.3%</div></div>
+      <div><div class="k">回到歷史高點需</div><div class="v num" style="color:var(--gold)">+73.3%</div></div>
       <div><div class="k">型態頸線目標</div><div class="v num">231.72</div></div>
       <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+29.06%</div></div>
     </div>
@@ -269,7 +281,7 @@
       <div><div class="k">市值</div><div class="v">約 390 億美元</div></div>
       <div><div class="k">收盤價</div><div class="v num">148.56 <span class="down">-0.34%</span></div></div>
       <div><div class="k">歷史高點（盤中）</div><div class="v num">483.13</div><div class="sub">2021/10/29</div></div>
-      <div><div class="k">距歷史高點</div><div class="v num"><span class="dn">-69.3%</span></div><div class="sub">回到高點需 +225.2%</div></div>
+      <div><div class="k">回到歷史高點需</div><div class="v num" style="color:var(--gold)">+225.2%</div></div>
       <div><div class="k">型態頸線目標</div><div class="v num">221.01</div></div>
       <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+48.58%</div></div>
     </div>
@@ -303,7 +315,7 @@
       <div><div class="k">市值</div><div class="v">約 280 億美元</div></div>
       <div><div class="k">收盤價</div><div class="v num">57.67 <span class="up">+1.37%</span></div></div>
       <div><div class="k">歷史高點（盤中）</div><div class="v num">93.47</div><div class="sub">2022/03/22</div></div>
-      <div><div class="k">距歷史高點</div><div class="v num"><span class="dn">-38.3%</span></div><div class="sub">回到高點需 +62.1%</div></div>
+      <div><div class="k">回到歷史高點需</div><div class="v num" style="color:var(--gold)">+62.1%</div></div>
       <div><div class="k">型態頸線目標</div><div class="v num">68.30</div></div>
       <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+18.42%</div></div>
     </div>
@@ -339,7 +351,7 @@
       <div><div class="k">市值</div><div class="v">約 80‒85 億美元</div></div>
       <div><div class="k">收盤價</div><div class="v num">15.05 <span class="up">+7.50%</span></div></div>
       <div><div class="k">歷史高點（盤中）</div><div class="v num">90.00</div><div class="sub">2021/05/28</div></div>
-      <div><div class="k">距歷史高點</div><div class="v num"><span class="dn">-83.3%</span></div><div class="sub">回到高點需 +498.0%</div></div>
+      <div><div class="k">回到歷史高點需</div><div class="v num" style="color:var(--gold)">+498.0%</div></div>
       <div><div class="k">型態頸線目標</div><div class="v num">22.03</div></div>
       <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+46.44%</div></div>
     </div>
@@ -365,9 +377,10 @@
   <section class="cta">
     <div class="copy">
       <h2>加入 Telegram 頻道！</h2>
-      <p>加入這個 Telegram 頻道！有好的進出場時機時，我會第一時間在 Telegram 內通知。</p>
+      <p>有好的進出場時機時，會第一時間在 Telegram 內通知。</p>
       <p>只要註冊 LBank 交易所（只需一分鐘即可完成註冊），就可以免費加入這個頻道，還會加碼贈送價值 100 美元的交易指標！</p>
-      <a class="btn" href="https://t.me/acssun_bot" rel="noopener">https://t.me/acssun_bot</a>
+      <a class="btn" href="https://t.me/acssun_bot" rel="noopener">免費加入 Telegram 頻道 <span class="arrow" aria-hidden="true">→</span></a>
+      <p class="btnurl">https://t.me/acssun_bot</p>
     </div>
     <div class="shot">
       <img src="img/telegram.jpg" alt="Telegram 頻道截圖" width="440" height="954" loading="lazy" decoding="async">
