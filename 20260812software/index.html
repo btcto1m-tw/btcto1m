@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>美股軟體股 選股清單｜BTCto1M</title>
-<meta name="description" content="NOW / WDAY / TEAM / CTSH / PATH 五檔美股軟體股，技術面型態突破 × 基本面利多整理。個人研究整理，不構成投資建議。">
+<meta name="description" content="NOW / WDAY / TEAM / CTSH / PATH 五檔美股軟體股，技術面型態突破 × 基本面利多、距歷史高點與庫藏股整理。個人研究整理，不構成投資建議。">
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="BTCto1M">
 <meta property="og:locale" content="zh_TW">
 <meta property="og:title" content="美股軟體股 選股清單">
-<meta property="og:description" content="NOW / WDAY / TEAM / CTSH / PATH 五檔美股軟體股，技術面型態突破 × 基本面利多整理。">
+<meta property="og:description" content="NOW / WDAY / TEAM / CTSH / PATH 五檔美股軟體股，技術面型態突破 × 基本面利多、距歷史高點與庫藏股整理。">
 <meta property="og:url" content="https://btcto1m.com/20260812software/">
 <meta property="og:image" content="https://btcto1m.com/20260812software/img/now.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="美股軟體股 選股清單">
-<meta name="twitter:description" content="NOW / WDAY / TEAM / CTSH / PATH 五檔美股軟體股，技術面型態突破 × 基本面利多整理。">
+<meta name="twitter:description" content="NOW / WDAY / TEAM / CTSH / PATH 五檔美股軟體股，技術面型態突破 × 基本面利多、距歷史高點與庫藏股整理。">
 <meta name="twitter:image" content="https://btcto1m.com/20260812software/img/now.png">
 <link rel="canonical" href="https://btcto1m.com/20260812software/">
 
@@ -47,12 +47,13 @@
 
   /* 摘要表：手機上整塊橫向捲動，頁面本身不橫向捲 */
   .table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  table{width:100%;min-width:660px;border-collapse:collapse;font-size:12.5px}
+  table{width:100%;min-width:760px;border-collapse:collapse;font-size:12.5px}
   th{padding:8px;background:var(--gold-soft);border-bottom:1.5px solid var(--gold);font-weight:700;text-align:left;white-space:nowrap}
   td{padding:9px 8px;border-bottom:1px solid var(--gold-line);vertical-align:top}
   .num{font-family:var(--mono)}
   .sym{font-family:var(--mono);font-weight:500}
   .pct{font-family:var(--mono);font-weight:500;text-align:right;color:var(--gold);white-space:nowrap}
+  .off{font-family:var(--mono);font-weight:500;text-align:right;color:oklch(0.5 0.13 25);white-space:nowrap}
   th:last-child{text-align:right}
 
   .note{font-size:12.5px;line-height:1.65;margin:18px 0 6px;color:var(--sub)}
@@ -65,11 +66,13 @@
   .head .ex{font-size:12px;color:var(--sub);letter-spacing:0.06em}
   .head .tag{margin-left:auto;font-size:13px;font-weight:500;padding:4px 10px;background:var(--gold-soft);color:oklch(0.4 0.1 75)}
 
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:oklch(0.85 0.06 85);margin-top:1px}
+  .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:oklch(0.85 0.06 85);margin-top:1px}
   .stats>div{background:oklch(0.985 0.014 85);padding:12px 14px}
   .stats .k{font-size:11.5px;color:var(--sub);margin-bottom:4px}
   .stats .v{font-size:16px;font-weight:500}
   .stats .v.num{font-family:var(--mono)}
+  .stats .v .dn{color:oklch(0.5 0.13 25)}
+  .stats .sub{font-size:11px;color:var(--sub);margin-top:4px;line-height:1.45}
   .up{font-size:12.5px;color:var(--gold)}
   .down{font-size:12.5px;color:oklch(0.55 0.13 25)}
 
@@ -80,7 +83,9 @@
   ul{margin:0;padding-left:20px;font-size:14.5px;line-height:1.7}
   li{margin-bottom:8px}
   li:last-child{margin-bottom:0}
-  .risk{font-size:13.5px;line-height:1.7;margin:18px 0 0;padding:12px 14px;background:oklch(0.97 0.03 85);border-left:3px solid var(--gold)}
+  .buyback{font-size:13.5px;line-height:1.7;margin:18px 0 0;padding:12px 14px;background:oklch(0.975 0.012 250);border-left:3px solid oklch(0.55 0.08 250)}
+  .buyback b{font-weight:700}
+  .risk{font-size:13.5px;line-height:1.7;margin:12px 0 0;padding:12px 14px;background:oklch(0.97 0.03 85);border-left:3px solid var(--gold)}
 
   .cta{margin-top:56px;border-top:2px solid var(--gold);padding-top:24px;display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap}
   .cta .copy{flex:1 1 300px;min-width:0}
@@ -93,6 +98,9 @@
   footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--gold-line);font-size:12.5px;color:var(--sub);line-height:1.7}
   footer a{color:var(--gold)}
 
+  @media (max-width:640px){
+    .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
   @media (max-width:520px){
     main{padding:28px 16px 44px}
     .head .tag{margin-left:0;width:100%}
@@ -110,7 +118,7 @@
     <table>
       <thead>
         <tr>
-          <th>代號</th><th>公司</th><th>市值</th><th>收盤價</th><th>型態</th><th>頸線目標</th><th>潛在漲幅</th>
+          <th>代號</th><th>公司</th><th>市值</th><th>收盤價</th><th>歷史高點</th><th>距高點</th><th>型態</th><th>頸線目標</th><th>潛在漲幅</th>
         </tr>
       </thead>
       <tbody>
@@ -119,6 +127,8 @@
           <td>ServiceNow, Inc.</td>
           <td>約 1,400 億美元</td>
           <td class="num">124.88</td>
+          <td class="num">239.62</td>
+          <td class="off">-47.9%</td>
           <td>上升三角形突破</td>
           <td class="num">170.51</td>
           <td class="pct">+36.58%</td>
@@ -128,6 +138,8 @@
           <td>Workday, Inc. Class A</td>
           <td>約 480 億美元</td>
           <td class="num">179.64</td>
+          <td class="num">311.28</td>
+          <td class="off">-42.3%</td>
           <td>矩形箱型突破（約 113‒150 區間）</td>
           <td class="num">231.72</td>
           <td class="pct">+29.06%</td>
@@ -137,6 +149,8 @@
           <td>Atlassian Corporation Class A</td>
           <td>約 390 億美元</td>
           <td class="num">148.56</td>
+          <td class="num">483.13</td>
+          <td class="off">-69.3%</td>
           <td>對稱三角形突破</td>
           <td class="num">221.01</td>
           <td class="pct">+48.58%</td>
@@ -146,6 +160,8 @@
           <td>Cognizant Technology Solutions Class A</td>
           <td>約 280 億美元</td>
           <td class="num">57.67</td>
+          <td class="num">93.47</td>
+          <td class="off">-38.3%</td>
           <td>下降通道突破</td>
           <td class="num">68.30</td>
           <td class="pct">+18.42%</td>
@@ -155,6 +171,8 @@
           <td>UiPath, Inc. Class A</td>
           <td>約 80‒85 億美元</td>
           <td class="num">15.05</td>
+          <td class="num">90.00</td>
+          <td class="off">-83.3%</td>
           <td>上升三角形突破（頸線約 13）</td>
           <td class="num">22.03</td>
           <td class="pct">+46.44%</td>
@@ -164,6 +182,7 @@
   </div>
 
   <p class="note">說明：市值為依 8 月中旬股價概算之近似值，實際數字請以券商或 TradingView 報價為準。「頸線目標」與「潛在漲幅」取自各檔圖表上量測的型態幅度，屬技術面推估，非分析師目標價。</p>
+  <p class="note">「歷史高點」為掛牌以來的<b>盤中最高價</b>，「距高點」為本表收盤價相對該高點的跌幅。NOW 因 2025 年 12 月執行 5 股換 1 股分割，高點已還原為分割後價格（原始盤中高點 1,198.09 ÷ 5 = 239.62）。</p>
   <p class="note">本文件為個人研究整理，不構成投資建議；每一檔的風險段落請務必一併閱讀。</p>
 
   <!-- NOW -->
@@ -177,6 +196,8 @@
     <div class="stats">
       <div><div class="k">市值</div><div class="v">約 1,400 億美元</div></div>
       <div><div class="k">收盤價</div><div class="v num">124.88 <span class="up">+6.42%</span></div></div>
+      <div><div class="k">歷史高點（盤中）</div><div class="v num">239.62</div><div class="sub">2025/01/28 · 已還原 5:1 分割</div></div>
+      <div><div class="k">距歷史高點</div><div class="v num"><span class="dn">-47.9%</span></div><div class="sub">回到高點需 +91.9%</div></div>
       <div><div class="k">型態頸線目標</div><div class="v num">170.51</div></div>
       <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+36.58%</div></div>
     </div>
@@ -188,6 +209,7 @@
       <li>cRPO 132 億美元年增 21%，單季逾百萬美元新增 ACV 的大單有 123 筆、年增近 40%，代表大型企業續約與擴充動能仍強。</li>
       <li>管理層把定位從「工作流程」拉高到「企業 AI 控制塔」，資安與風險（AI Control Tower、Armis）成為 AI 之外的第二成長引擎。</li>
     </ul>
+    <p class="buyback"><b>庫藏股</b>｜2026 年 1 月 28 日董事會再授權 50 億美元買回，加上 2025 年底剩餘的約 14 億美元額度，並隨即啟動 20 億美元的加速買回（ASR）。該計畫無到期日。</p>
     <p class="risk">風險提醒｜股價過去一年跌幅大，市場對 AI 是否反過來侵蝕 SaaS 席次仍有疑慮；併購導致訂閱毛利率下滑、匯率也是逆風。</p>
   </section>
 
@@ -202,6 +224,8 @@
     <div class="stats">
       <div><div class="k">市值</div><div class="v">約 480 億美元</div></div>
       <div><div class="k">收盤價</div><div class="v num">179.64 <span class="up">+5.52%</span></div></div>
+      <div><div class="k">歷史高點（盤中）</div><div class="v num">311.28</div><div class="sub">2024/02/26</div></div>
+      <div><div class="k">距歷史高點</div><div class="v num"><span class="dn">-42.3%</span></div><div class="sub">回到高點需 +73.3%</div></div>
       <div><div class="k">型態頸線目標</div><div class="v num">231.72</div></div>
       <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+29.06%</div></div>
     </div>
@@ -213,6 +237,7 @@
       <li>41 位分析師中 23 位「強力買進」，平均目標價約 186 美元；下一次財報落在 8 月下旬，是短線催化劑。</li>
       <li>HCM 與財務管理是企業最難更換的核心系統，替換成本高，AI 反而讓 Workday 有機會做流程層的加值而非被取代。</li>
     </ul>
+    <p class="buyback"><b>庫藏股</b>｜2025 年 9 月 16 日董事會加碼授權 40 億美元，連同既有額度合計約 50 億美元、執行至 FY2027。FY2026 全年已買回約 1,280 萬股、金額 29 億美元，其中第三季買回約 340 萬股、8.03 億美元。五檔中執行力道最強。</p>
     <p class="risk">風險提醒｜7 月曾遭大摩降評至 Underweight、CLSA 給 Underperform；市場對「AI 取代 SaaS 席次計價模式」的疑慮尚未解除。</p>
   </section>
 
@@ -227,6 +252,8 @@
     <div class="stats">
       <div><div class="k">市值</div><div class="v">約 390 億美元</div></div>
       <div><div class="k">收盤價</div><div class="v num">148.56 <span class="down">-0.34%</span></div></div>
+      <div><div class="k">歷史高點（盤中）</div><div class="v num">483.13</div><div class="sub">2021/10/29</div></div>
+      <div><div class="k">距歷史高點</div><div class="v num"><span class="dn">-69.3%</span></div><div class="sub">回到高點需 +225.2%</div></div>
       <div><div class="k">型態頸線目標</div><div class="v num">221.01</div></div>
       <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+48.58%</div></div>
     </div>
@@ -238,6 +265,7 @@
       <li>成長歸因於 AI 產品 Rovo 的大規模企業導入，Jira、Confluence 既有安裝基礎成為 AI 加價銷售的天然通路。</li>
       <li>產品線由 Jira / Confluence 延伸到 Compass、Jira Align、Focus、Guard，並與 Mattermost 合作切入國防與關鍵基礎設施的自主部署市場。</li>
     </ul>
+    <p class="buyback"><b>庫藏股</b>｜2025 年 10 月授權 25 億美元買回 A 股，接續 2024 年 9 月的 15 億美元計畫，無到期日。</p>
     <p class="risk">風險提醒｜股價自高點腰斬過，波動極大；本次是財報跳空後的高位型態，追價風險與回測缺口風險都要算進去。</p>
   </section>
 
@@ -252,6 +280,8 @@
     <div class="stats">
       <div><div class="k">市值</div><div class="v">約 280 億美元</div></div>
       <div><div class="k">收盤價</div><div class="v num">57.67 <span class="up">+1.37%</span></div></div>
+      <div><div class="k">歷史高點（盤中）</div><div class="v num">93.47</div><div class="sub">2022/03/22</div></div>
+      <div><div class="k">距歷史高點</div><div class="v num"><span class="dn">-38.3%</span></div><div class="sub">回到高點需 +62.1%</div></div>
       <div><div class="k">型態頸線目標</div><div class="v num">68.30</div></div>
       <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+18.42%</div></div>
     </div>
@@ -263,6 +293,7 @@
       <li>成立 EMEA AI 專責事業單位，協助歐非中東客戶把 AI 從試點推向規模化落地；另以 6 億美元收購 Astreya Partners。</li>
       <li>估值是五檔中最低的一檔，本益比約 12 倍，且有每股 0.33 美元的季配息與持續買回，屬於防禦性配置。</li>
     </ul>
+    <p class="buyback"><b>庫藏股</b>｜2026 年 5 月 18 日將全年買回目標上調 10 億美元至 20 億美元，董事會同時加碼授權 20 億美元，5 月 17 日剩餘額度約 34.5 億美元；並執行 5 億美元的加速買回（ASR）。五檔中唯一同時有季配息與買回的一檔。</p>
     <p class="risk">風險提醒｜營收成長僅約 5%，遠低於 IT 產業預估的 13%；客戶對非必要 IT 支出仍保守，且 AI 有可能反噬人力外包的計費模式。</p>
   </section>
 
@@ -277,6 +308,8 @@
     <div class="stats">
       <div><div class="k">市值</div><div class="v">約 80‒85 億美元</div></div>
       <div><div class="k">收盤價</div><div class="v num">15.05 <span class="up">+7.50%</span></div></div>
+      <div><div class="k">歷史高點（盤中）</div><div class="v num">90.00</div><div class="sub">2021/05/28</div></div>
+      <div><div class="k">距歷史高點</div><div class="v num"><span class="dn">-83.3%</span></div><div class="sub">回到高點需 +498.0%</div></div>
       <div><div class="k">型態頸線目標</div><div class="v num">22.03</div></div>
       <div><div class="k">潛在漲幅</div><div class="v num" style="color:var(--gold)">+46.44%</div></div>
     </div>
@@ -288,6 +321,7 @@
       <li>agentic 自動化平台 Maestro 是核心題材，CEO 稱代理型產品正「從試點走向正式生產」；並購 WorkFusion 補強金融業 AI agent。</li>
       <li>與 Microsoft、OpenAI、Google、NVIDIA 的整合，加上取得杜拜資安認證，打開政府與受監管產業的自主部署商機。</li>
     </ul>
+    <p class="buyback"><b>庫藏股</b>｜前一輪 10 億美元計畫已執行完畢，2026 年 3 月 5 日新授權 5 億美元買回 A 股，無到期日。以約 80‒85 億美元的市值來看，這是五檔中相對市值最積極的買回之一。</p>
     <p class="risk">風險提醒｜市值最小、波動最大。分析師共識偏 Hold，平均目標價約 13.4‒13.8 美元，反而低於現價；淨續約率 109% 偏低，AI 變現尚未被證明。</p>
   </section>
 
