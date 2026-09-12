@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>賣掉之後它才漲｜BTCto1M</title>
+<meta name="description" content="我怎麼決定出場：高檔量縮、跌破盤整區間、分批賣，還有為什麼我只做多不做空。個人研究整理，不構成投資建議。">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="BTCto1M">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="賣掉之後它才漲">
+<meta property="og:description" content="我怎麼決定出場，還有為什麼我不做空。三個訊號，一個代價。">
+<meta property="og:url" content="https://btcto1m.com/20260902exit/">
+<meta property="og:image" content="https://btcto1m.com/20260902exit/img/btc-weekly-topping.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="賣掉之後它才漲">
+<meta name="twitter:description" content="我怎麼決定出場，還有為什麼我不做空。三個訊號，一個代價。">
+<meta name="twitter:image" content="https://btcto1m.com/20260902exit/img/btc-weekly-topping.png">
+<link rel="canonical" href="https://btcto1m.com/20260902exit/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --gold:oklch(0.55 0.15 75);
+    --gold-soft:oklch(0.96 0.04 85);
+    --gold-line:oklch(0.9 0.03 85);
+    --ink:oklch(0.24 0.008 250);
+    --sub:oklch(0.5 0.01 250);
+    --sans:'Noto Sans TC',-apple-system,'PingFang TC','Helvetica Neue',Arial,sans-serif;
+    --serif:'Noto Serif TC',Georgia,'Songti TC','Times New Roman',serif;
+    --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:var(--sans);color:var(--ink);background:#fff;overflow-wrap:break-word}
+  a{color:oklch(0.45 0.13 75)}
+  a:hover{color:oklch(0.35 0.1 75)}
+  main{max-width:860px;margin:0 auto;padding:40px 20px 56px}
+
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(26px,6vw,34px);line-height:1.25;margin:0 0 10px;letter-spacing:-0.01em}
+  .lede{font-size:15px;line-height:1.6;margin:0;color:var(--sub)}
+  .rule{height:2px;background:var(--gold);margin:20px 0 24px}
+
+  .table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{width:100%;min-width:760px;border-collapse:collapse;font-size:12.5px}
+  th{padding:8px;background:var(--gold-soft);border-bottom:1.5px solid var(--gold);font-weight:700;text-align:left;white-space:nowrap}
+  td{padding:9px 8px;border-bottom:1px solid var(--gold-line);vertical-align:top}
+  .num{font-family:var(--mono)}
+  .sym{font-family:var(--mono);font-weight:500;white-space:nowrap}
+  .pct{font-family:var(--mono);font-weight:500;text-align:right;color:var(--gold);white-space:nowrap}
+  th:last-child{text-align:right}
+
+  .note{font-size:12.5px;line-height:1.65;margin:18px 0 6px;color:var(--sub)}
+  .note:last-of-type{margin-bottom:0}
+
+  section.item{margin-top:52px}
+  .head{display:flex;align-items:baseline;gap:10px 14px;flex-wrap:wrap;border-bottom:2px solid var(--gold);padding-bottom:10px}
+  .head .t{font-family:var(--mono);font-size:clamp(24px,7vw,30px);font-weight:500;letter-spacing:0.02em}
+  .head .n{font-family:var(--serif);font-size:clamp(16px,4.5vw,19px);font-weight:500}
+  .head .ex{font-size:12px;color:var(--sub);letter-spacing:0.06em}
+  .head .tag{margin-left:auto;font-size:13px;font-weight:500;padding:4px 10px;background:var(--gold-soft);color:oklch(0.4 0.1 75)}
+
+  .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:oklch(0.85 0.06 85);margin-top:1px}
+  .stats>div{background:oklch(0.985 0.014 85);padding:12px 14px}
+  .stats .k{font-size:11.5px;color:var(--sub);margin-bottom:4px}
+  .stats .v{font-size:16px;font-weight:500}
+  .stats .v.num{font-family:var(--mono)}
+  .stats .sub{font-size:11px;color:var(--sub);margin-top:4px;line-height:1.45}
+  .up{font-size:12.5px;color:var(--gold)}
+  .down{font-size:12.5px;color:oklch(0.55 0.13 25)}
+
+  .intro{font-size:14.5px;line-height:1.75;margin:20px 0 0;padding:14px 16px;background:oklch(0.98 0.006 250);border:1px solid var(--gold-line)}
+  .intro b{font-weight:700;font-family:var(--serif)}
+  figure{margin:22px 0 0}
+  figure img{display:block;width:100%;height:auto;border:1px solid var(--gold-line)}
+  figcaption{font-size:12px;line-height:1.6;color:var(--sub);margin-top:8px}
+
+  h2{font-family:var(--serif);font-size:17px;font-weight:700;margin:24px 0 10px}
+  ul{margin:0;padding-left:20px;font-size:14.5px;line-height:1.7}
+  li{margin-bottom:8px}
+  li:last-child{margin-bottom:0}
+  p.body{font-size:14.5px;line-height:1.75;margin:0 0 12px}
+  .fact{font-size:13.5px;line-height:1.7;margin:18px 0 0;padding:12px 14px;background:oklch(0.975 0.012 250);border-left:3px solid oklch(0.55 0.08 250)}
+  .fact b{font-weight:700}
+  .risk{font-size:13.5px;line-height:1.7;margin:12px 0 0;padding:12px 14px;background:oklch(0.97 0.03 85);border-left:3px solid var(--gold)}
+
+  .cta{margin-top:56px;border-top:2px solid var(--gold);padding-top:24px;display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap}
+  .cta .copy{flex:1 1 300px;min-width:0}
+  .cta h2{margin-top:0;font-size:19px}
+  .cta p{font-size:14.5px;line-height:1.75;margin:0 0 12px}
+  .cta .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    margin-top:6px;padding:16px 30px;
+    font-size:17px;font-weight:700;line-height:1;
+    color:#fff;background:var(--gold);border:0;border-radius:999px;
+    text-decoration:none;cursor:pointer;
+    box-shadow:0 4px 14px oklch(0.55 0.15 75/.35);
+    transition:background .12s ease,transform .12s ease,box-shadow .12s ease;
+  }
+  .cta .btn:hover{color:#fff;background:oklch(0.48 0.15 75);transform:translateY(-2px);box-shadow:0 8px 22px oklch(0.55 0.15 75/.45)}
+  .cta .btn:active{transform:translateY(0);box-shadow:0 3px 10px oklch(0.55 0.15 75/.4)}
+  .cta .btn:focus-visible{outline:3px solid oklch(0.45 0.13 75);outline-offset:3px}
+  .cta .btn .arrow{font-size:19px;line-height:1}
+  .cta .btnurl{margin:12px 0 0;font-family:var(--mono);font-size:12px;color:var(--sub);overflow-wrap:anywhere}
+  .cta .shot{flex:0 1 200px;max-width:200px}
+  .cta .shot img{display:block;width:100%;height:auto;border-radius:10px}
+
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--gold-line);font-size:12.5px;color:var(--sub);line-height:1.7}
+  footer a{color:var(--gold)}
+
+  @media (max-width:640px){
+    .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  @media (max-width:520px){
+    main{padding:28px 16px 44px}
+    .head .tag{margin-left:0;width:100%}
+    .cta .btn{width:100%}
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>賣掉之後它才漲</h1>
+  <p class="lede">我怎麼決定出場，還有為什麼我不做空 ｜ 整理日期：2026 年 9 月 2 日</p>
+  <div class="rule"></div>
+
+  <p class="intro"><b>先講一件我以前做錯的事</b>｜我在 430 賣掉特斯拉，它漲到 480，那幾天我一直覺得自己賣太早。後來它跌到 350，我回頭看那筆，又覺得自己賣對了。<b>同一個決定，中間我什麼都沒做，評價卻反過來。</b>賣點會不會後悔，取決於你什麼時候回頭看，所以我後來不用「有沒有賣在最高」來檢討自己，我改用規則。這頁講的就是那套規則。</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>訊號</th><th>我怎麼看</th><th>我會做什麼</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>高檔開始盤整，而且量在縮</td><td>價格在相對高檔橫著走，成交量一週比一週小</td><td>開始<b>分批賣</b>，不是一次出光</td></tr>
+      <tr><td>跌破那個盤整區間</td><td>橫盤區的下緣被跌破</td><td><b>直接出，不留</b></td></tr>
+      <tr><td>短線的停損位被打到</td><td>進場當下就設好的那個價位</td><td>出場，承認這次是假突破</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">說明：這三個是我自己在用的規則，不是市場公認的標準。我做的是追勢型的短線與波段，不做空；如果你做的是長期存股，這頁不適用，兩種要用不同的心臟。</p>
+
+  <p class="risk">本頁為個人研究整理，不構成投資建議；最後一段「這套規則的代價」請務必一併看完。</p>
+
+  <!-- ── 01 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">01</span>
+      <span class="n">高檔量縮：進場看爆量，出場看沒量</span>
+      <span class="ex">EXIT SIGNAL</span>
+      <span class="tag">最主要的訊號</span>
+    </div>
+
+    <p class="intro"><b>一句話</b>｜低檔盤整會爆量，高檔盤整會縮量。同樣是橫著走，量的方向剛好相反。</p>
+
+    <h2>為什麼出場不能沿用進場那一套</h2>
+    <ul>
+      <li><b>進場的時候我等的是「有人進來」。</b>價格在低檔橫盤，突然出現一根特別高的量柱，那代表有一批新的錢願意在這個位置接手。我把那個當成可以開始買的訊號。</li>
+      <li><b>出場的時候等不到同一種訊號。</b>價格在高檔的時候，成交量本來就普遍偏高，天天都很熱鬧。想等一根「特別大的量」來告訴你該走了，通常等不到。</li>
+      <li><b>所以出場我改看量的方向。</b>價格在高檔開始橫著走，而成交量一週比一週小，那代表想買的人買得差不多了。推它上來的錢在退場。</li>
+    </ul>
+
+    <h2>怎麼看（三步，五分鐘）</h2>
+    <ul>
+      <li><b>第一步：切到週線。</b>跟看進場一樣。日線的量每天跳，看不出方向。</li>
+      <li><b>第二步：先確認價格真的在高檔。</b>用 KD 或均線判斷，現在的價格是不是明顯高過這段時間買進的人的平均成本。位置不對就不要套這條規則。</li>
+      <li><b>第三步：看最近三到五根量柱是不是一根比一根矮。</b>不用算精確倍數，用眼睛看。價格橫著走、量往下走，就是這個型態。</li>
+    </ul>
+
+    <figure>
+      <img src="img/btc-weekly-topping.png" alt="比特幣兌美元週線圖，2024 到 2026，下方為成交量" width="1922" height="1318" loading="lazy" decoding="async">
+      <figcaption>比特幣／美元週線（Kraken），截圖時間 2026 年 9 月 3 日，圖上顯示的收盤為 77,566.7。下方那排是成交量，藍線是均量。</figcaption>
+    </figure>
+
+    <h2>這張圖在說什麼</h2>
+    <ul>
+      <li><b>2024 那一整片量柱又高又密。</b>價格從兩萬多一路往上，下面的柱子一根接一根站在均量線上面，還出現過四萬那根。那是有錢一直進來的樣子。</li>
+      <li><b>2025 年七月之後就是我要講的那一段。</b>價格在十一萬到十二萬五之間做了一個雙頭、橫了好幾個月，可是下面的量柱明顯縮下去了，大部分貼在均量線附近或更矮。<b>價格還在高檔，錢已經在退。</b></li>
+      <li><b>然後 2026 就跌破了。</b>從十一萬一路掉到六萬附近。回頭看，高檔那幾個月的量縮就是提前講出來的話，只是當下不會有人敲鑼打鼓通知你。</li>
+      <li><b>最右邊那根量拉起來了。</b>不過那只是一週。我要看到的是連續兩週以上，或者是<b>帶著量但價格橫著走</b>的那種，那才是真的在換手。單週爆量配上一根長紅，資訊還不夠。</li>
+    </ul>
+
+    <p class="fact">補充｜<b>高檔量縮不等於明天就跌。</b>它只代表這一段漲勢後面的錢在變少。有些標的可以在高檔縮著量磨很久，甚至再往上一段。這條規則是讓我開始減，不是叫我一次跑光，這也是為什麼下一節要分批。</p>
+
+    <p class="risk">風險提醒｜<b>高檔爆量也要小心，而且方向相反。</b>高檔出現特別大的量配上一根長黑，那不是有人在搶進，是有人在大量賣給你。低檔爆量比較像進場，高檔爆量比較像離場，同一個訊號在不同位置意思完全不同。</p>
+  </section>
+
+  <!-- ── 02 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">02</span>
+      <span class="n">分批賣：我不會一次出光</span>
+      <span class="ex">SCALING OUT</span>
+      <span class="tag">怎麼執行</span>
+    </div>
+
+    <p class="intro"><b>一句話</b>｜我進場分批，出場也分批。分批買是為了不用猜底，分批賣是為了不用猜頂。</p>
+
+    <h2>為什麼不一次賣完</h2>
+    <ul>
+      <li><b>因為我不知道這裡是不是最高點。</b>沒有人知道。一次出光只有兩種結果：它繼續漲，我後悔；它馬上跌，我覺得自己是天才。這兩種我都不想賭。</li>
+      <li><b>分批把「賣點」變成「賣區」。</b>我不是在找一個價格，是在一段區間裡陸續離場。這樣不管它之後往哪走，我都有一部分是對的。</li>
+      <li><b>心態成本比報酬率重要。</b>一次賣完之後盯著它漲，那個煩會影響我下一筆交易的判斷。我寧願少賺一點，換一個不會亂的腦袋。</li>
+    </ul>
+
+    <h2>什麼時候停止分批，直接全出</h2>
+    <ul>
+      <li><b>跌破盤整區間的下緣。</b>高檔橫盤那一段，下緣被跌破就是型態壞了。這時候我不再分批，剩下的一次出完。</li>
+      <li><b>短線的停損位被打到。</b>做短線我進場當下就會設好停損。被打到就走，不會改口說「那我改成長期投資」。</li>
+      <li><b>出完之後它又反彈上去，那也沒辦法。</b>這種事會發生。那我就當這段沒賺到，或者重新用進場那套條件再看一次要不要進去做短線。</li>
+    </ul>
+
+    <p class="fact">補充｜<b>怎麼分批進場寫在另一頁。</b>總額怎麼抓、一季要除以幾、每次買多少（有查表），在 <a href="https://btcto1m.com/20260813dca/">分批進場怎麼分：一季的錢，每天買一點</a>。判斷要不要開始買，在 <a href="https://btcto1m.com/20260825volume/">追高之前先看量</a>。這三頁是同一套系統的三段。</p>
+  </section>
+
+  <!-- ── 03 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">03</span>
+      <span class="n">我不做空，這是我用三十萬換來的</span>
+      <span class="ex">LONG ONLY</span>
+      <span class="tag">我的限制</span>
+    </div>
+
+    <p class="intro"><b>一句話</b>｜錢可以分開，腦袋分不開。我同時做兩套方法的那一次，兩邊都沒做好。</p>
+
+    <h2>那次發生什麼事</h2>
+    <ul>
+      <li><b>我同時在特斯拉上做兩件事。</b>一邊當長期部位放著，一邊做短線價差、賺它的高低。我當時覺得很合理，反正錢分兩份就好了。</li>
+      <li><b>錢分得開，判斷分不開。</b>做短線那顆腦袋會一直干擾長期那顆。看到高點就想跑，看到回檔就想加，最後兩邊的規則都沒有被好好執行。</li>
+      <li><b>結果是我的特斯拉少賺了三十萬。</b>不是虧三十萬，是本來可以拿到但沒拿到。這種損失不會出現在對帳單上，所以更容易被忽略。</li>
+    </ul>
+
+    <h2>所以我現在怎麼做</h2>
+    <ul>
+      <li><b>只做多，不做空。</b>我知道做空可以賺，但那需要另一套心態，而我已經證明過自己切換不好。</li>
+      <li><b>把全部賣掉、全部持現金，其實也是一種做空。</b>那是在賭它會跌。所以我出場之後不會再加碼看空的部位，就是單純的沒有部位。</li>
+      <li><b>長期存的錢跟超短線的錢完全分開。</b>不同帳戶、不同規則，不會互相看。這是那三十萬買到最實用的一條。</li>
+    </ul>
+
+    <p class="risk">風險提醒｜<b>不做空不代表比較安全。</b>它只是把我的虧損上限固定在「這筆錢歸零」，不會像做空那樣理論上無限。代價是遇到整段下跌行情時我只能空手等，什麼都賺不到。</p>
+  </section>
+
+  <!-- ── 04 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">04</span>
+      <span class="n">賣完之後的那幾天</span>
+      <span class="ex">AFTER</span>
+      <span class="tag">心態</span>
+    </div>
+
+    <p class="intro"><b>一句話</b>｜你賣掉的當下永遠會覺得太早，因為你只看得到接下來那幾天。</p>
+
+    <h2>我怎麼跟自己和解</h2>
+    <ul>
+      <li><b>賣點的對錯會隨時間改變。</b>430 賣、480 的時候是錯的、350 的時候又是對的。中間我什麼都沒做。既然評價會變，我就不拿它當標準。</li>
+      <li><b>只要它後面開始跌，你賣的每個位置都會變成高點。</b>反過來說，只要它一直漲，你賣在哪裡都會覺得早。所以真正該檢討的不是價格，是我當初有沒有照規則走。</li>
+      <li><b>我只賺我這套方法看得懂的那一段。</b>看不懂的那些行情不是拿來賺的，是拿來影響心態的。我錯過的那些，本來就不在我的守備範圍。</li>
+    </ul>
+
+    <p class="fact">補充｜<b>我最痛的一次不是虧最多的那次。</b>2023 年那次 Meta，我原本的計畫是碰到清算價就入金攤平，結果它真的碰到的時候，我沒照計畫做，跑去問別人，別人叫我砍，我就砍在最低點。後來它漲到六百。事後我發現我砍掉的理由不是害怕，是我看不懂、所以覺得很煩。<b>從那次之後我才知道，沒有十足的把握就不要開槓桿</b>，光是抱現貨都會煩了，開了槓桿是加倍的煩。</p>
+  </section>
+
+  <!-- ── 05 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">05</span>
+      <span class="n">這套規則的代價</span>
+      <span class="ex">TRADE-OFF</span>
+      <span class="tag">先看完再用</span>
+    </div>
+
+    <ul>
+      <li><b>你會賣太早，而且是常態。</b>高檔量縮通常出現在真正的頂之前，所以照這套走，最後那一段漲幅我大概率吃不到。</li>
+      <li><b>盤整很久的時候會很煩。</b>高檔橫盤可以橫好幾週，這段時間你會一直在問自己該不該先走。</li>
+      <li><b>不做空表示下跌段我完全沒有收入。</b>整段空手，看著別人賺，這件事要能接受。</li>
+      <li><b>這套規則只適用追勢型的短線與波段。</b>長期存股完全是另一套，兩種混著用就是我那三十萬的故事。</li>
+    </ul>
+
+    <p class="fact"><b>這一頁決定「什麼時候走」。</b>決定「買哪一種」在 <a href="https://btcto1m.com/20260912cheap/">便宜有兩種</a>，決定「要不要開始買」在 <a href="https://btcto1m.com/20260825volume/">追高之前先看量</a>，決定「開始之後怎麼買」在 <a href="https://btcto1m.com/20260813dca/">分批進場怎麼分</a>。</p>
+  </section>
+
+  <section class="cta">
+    <div class="copy">
+      <h2>加入 Telegram 頻道！</h2>
+      <p>有好的進出場時機時，會第一時間在 Telegram 內通知。</p>
+      <p>只要註冊 LBank 交易所（只需一分鐘即可完成註冊），就可以免費加入這個頻道，還會加碼贈送價值 100 美元的交易指標！</p>
+      <a class="btn" href="https://t.me/acssun_bot" rel="noopener">免費加入 Telegram 頻道 <span class="arrow" aria-hidden="true">→</span></a>
+      <p class="btnurl">https://t.me/acssun_bot</p>
+    </div>
+    <div class="shot">
+      <img src="img/telegram-channel.jpg" alt="Telegram 頻道畫面截圖" width="203" height="440" loading="lazy" decoding="async">
+    </div>
+  </section>
+
+  <footer>
+    本頁為個人研究整理，不構成投資建議，請自行判斷並承擔風險。<br>
+    © 2026 <a href="https://btcto1m.com">BTCto1M LLC</a>
+  </footer>
+
+</main>
+</body>
+</html>

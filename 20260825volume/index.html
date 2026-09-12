@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>追高之前先看量｜BTCto1M</title>
+<meta name="description" content="怎麼分辨「還能追」跟「別人已經在出貨」。三個自己就能查的條件，附我不進場的三種情況。個人研究整理，不構成投資建議。">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="BTCto1M">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="追高之前先看量">
+<meta property="og:description" content="怎麼分辨「還能追」跟「別人已經在出貨」。三個自己就能查的條件。">
+<meta property="og:url" content="https://btcto1m.com/20260825volume/">
+<meta property="og:image" content="https://btcto1m.com/20260825volume/img/btc-weekly-volume.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="追高之前先看量">
+<meta name="twitter:description" content="怎麼分辨「還能追」跟「別人已經在出貨」。三個自己就能查的條件。">
+<meta name="twitter:image" content="https://btcto1m.com/20260825volume/img/btc-weekly-volume.png">
+<link rel="canonical" href="https://btcto1m.com/20260825volume/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --gold:oklch(0.55 0.15 75);
+    --gold-soft:oklch(0.96 0.04 85);
+    --gold-line:oklch(0.9 0.03 85);
+    --ink:oklch(0.24 0.008 250);
+    --sub:oklch(0.5 0.01 250);
+    --sans:'Noto Sans TC',-apple-system,'PingFang TC','Helvetica Neue',Arial,sans-serif;
+    --serif:'Noto Serif TC',Georgia,'Songti TC','Times New Roman',serif;
+    --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:var(--sans);color:var(--ink);background:#fff;overflow-wrap:break-word}
+  a{color:oklch(0.45 0.13 75)}
+  a:hover{color:oklch(0.35 0.1 75)}
+  main{max-width:860px;margin:0 auto;padding:40px 20px 56px}
+
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(26px,6vw,34px);line-height:1.25;margin:0 0 10px;letter-spacing:-0.01em}
+  .lede{font-size:15px;line-height:1.6;margin:0;color:var(--sub)}
+  .rule{height:2px;background:var(--gold);margin:20px 0 24px}
+
+  .table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{width:100%;min-width:760px;border-collapse:collapse;font-size:12.5px}
+  th{padding:8px;background:var(--gold-soft);border-bottom:1.5px solid var(--gold);font-weight:700;text-align:left;white-space:nowrap}
+  td{padding:9px 8px;border-bottom:1px solid var(--gold-line);vertical-align:top}
+  .num{font-family:var(--mono)}
+  .sym{font-family:var(--mono);font-weight:500;white-space:nowrap}
+  .pct{font-family:var(--mono);font-weight:500;text-align:right;color:var(--gold);white-space:nowrap}
+  th:last-child{text-align:right}
+
+  .note{font-size:12.5px;line-height:1.65;margin:18px 0 6px;color:var(--sub)}
+  .note:last-of-type{margin-bottom:0}
+
+  section.item{margin-top:52px}
+  .head{display:flex;align-items:baseline;gap:10px 14px;flex-wrap:wrap;border-bottom:2px solid var(--gold);padding-bottom:10px}
+  .head .t{font-family:var(--mono);font-size:clamp(24px,7vw,30px);font-weight:500;letter-spacing:0.02em}
+  .head .n{font-family:var(--serif);font-size:clamp(16px,4.5vw,19px);font-weight:500}
+  .head .ex{font-size:12px;color:var(--sub);letter-spacing:0.06em}
+  .head .tag{margin-left:auto;font-size:13px;font-weight:500;padding:4px 10px;background:var(--gold-soft);color:oklch(0.4 0.1 75)}
+
+  .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:oklch(0.85 0.06 85);margin-top:1px}
+  .stats>div{background:oklch(0.985 0.014 85);padding:12px 14px}
+  .stats .k{font-size:11.5px;color:var(--sub);margin-bottom:4px}
+  .stats .v{font-size:16px;font-weight:500}
+  .stats .v.num{font-family:var(--mono)}
+  .stats .sub{font-size:11px;color:var(--sub);margin-top:4px;line-height:1.45}
+  .up{font-size:12.5px;color:var(--gold)}
+  .down{font-size:12.5px;color:oklch(0.55 0.13 25)}
+
+  .intro{font-size:14.5px;line-height:1.75;margin:20px 0 0;padding:14px 16px;background:oklch(0.98 0.006 250);border:1px solid var(--gold-line)}
+  .intro b{font-weight:700;font-family:var(--serif)}
+  figure{margin:22px 0 0}
+  figure img{display:block;width:100%;height:auto;border:1px solid var(--gold-line)}
+  figcaption{font-size:12px;line-height:1.6;color:var(--sub);margin-top:8px}
+
+  h2{font-family:var(--serif);font-size:17px;font-weight:700;margin:24px 0 10px}
+  ul{margin:0;padding-left:20px;font-size:14.5px;line-height:1.7}
+  li{margin-bottom:8px}
+  li:last-child{margin-bottom:0}
+  p.body{font-size:14.5px;line-height:1.75;margin:0 0 12px}
+  .fact{font-size:13.5px;line-height:1.7;margin:18px 0 0;padding:12px 14px;background:oklch(0.975 0.012 250);border-left:3px solid oklch(0.55 0.08 250)}
+  .fact b{font-weight:700}
+  .risk{font-size:13.5px;line-height:1.7;margin:12px 0 0;padding:12px 14px;background:oklch(0.97 0.03 85);border-left:3px solid var(--gold)}
+
+  .cta{margin-top:56px;border-top:2px solid var(--gold);padding-top:24px;display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap}
+  .cta .copy{flex:1 1 300px;min-width:0}
+  .cta h2{margin-top:0;font-size:19px}
+  .cta p{font-size:14.5px;line-height:1.75;margin:0 0 12px}
+  .cta .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    margin-top:6px;padding:16px 30px;
+    font-size:17px;font-weight:700;line-height:1;
+    color:#fff;background:var(--gold);border:0;border-radius:999px;
+    text-decoration:none;cursor:pointer;
+    box-shadow:0 4px 14px oklch(0.55 0.15 75/.35);
+    transition:background .12s ease,transform .12s ease,box-shadow .12s ease;
+  }
+  .cta .btn:hover{color:#fff;background:oklch(0.48 0.15 75);transform:translateY(-2px);box-shadow:0 8px 22px oklch(0.55 0.15 75/.45)}
+  .cta .btn:active{transform:translateY(0);box-shadow:0 3px 10px oklch(0.55 0.15 75/.4)}
+  .cta .btn:focus-visible{outline:3px solid oklch(0.45 0.13 75);outline-offset:3px}
+  .cta .btn .arrow{font-size:19px;line-height:1}
+  .cta .btnurl{margin:12px 0 0;font-family:var(--mono);font-size:12px;color:var(--sub);overflow-wrap:anywhere}
+  .cta .shot{flex:0 1 200px;max-width:200px}
+  .cta .shot img{display:block;width:100%;height:auto;border-radius:10px}
+
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--gold-line);font-size:12.5px;color:var(--sub);line-height:1.7}
+  footer a{color:var(--gold)}
+
+  @media (max-width:640px){
+    .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  @media (max-width:520px){
+    main{padding:28px 16px 44px}
+    .head .tag{margin-left:0;width:100%}
+    .cta .btn{width:100%}
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>追高之前先看量</h1>
+  <p class="lede">怎麼分辨「還能追」跟「別人已經在出貨」 ｜ 資料日期：2026 年 8 月 25 日</p>
+  <div class="rule"></div>
+
+  <p class="intro"><b>先講一件我以前做錯的事</b>｜我以前只敢買跌下來的。愈跌愈買，覺得便宜就是機會。2023 年那次我在下跌的路上一路接 Meta，接到一百塊附近被槓桿掃出場，然後它漲到六百。那次之後我學到的不是「不要抄底」，是<b>我根本沒在看有沒有人跟我一起買</b>。這頁講的就是那件事：量。</p>
+
+  <p class="body" style="margin-top:20px">「已經漲這麼多了還能買嗎」——這題我自己也怕過，而且怕的時候通常就真的錯過了。後來我把它拆成三個可以查的條件，查完再決定，比用感覺猜好很多。三個條件都是公開資料，你的看盤軟體裡本來就有，不用買什麼東西。</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>條件</th><th>我怎麼看</th><th>過關的樣子</th><th>沒過關代表什麼</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="sym">一 · 量</td>
+          <td>週線成交量，跟過去一年的平均量比</td>
+          <td>這一週的量是一年均量的 <span class="num">1.5</span>–<span class="num">2</span> 倍以上</td>
+          <td>沒有新的錢進來，只是少少的人在把價格推上去</td>
+        </tr>
+        <tr>
+          <td class="sym">二 · 位階</td>
+          <td>這一段漲勢是剛起來，還是已經走很久了</td>
+          <td>剛從盤整區出來、離起漲點不遠</td>
+          <td>你買的是別人的獲利了結對手單</td>
+        </tr>
+        <tr>
+          <td class="sym">三 · 題材</td>
+          <td>有沒有具體的事情在推它（訂單、財報、產業循環）</td>
+          <td>講得出一句話為什麼是現在</td>
+          <td>沒有故事的漲勢，跌回去的時候你不會知道該不該留</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="note">說明：這三個是我自己在用的門檻，不是市場公認的標準。1.5–2 倍那個數字是我自己抓的，你可以照自己的標的調——流動性差的小幣本來就更容易爆量，門檻要拉高；大型股 1.5 倍就很有意義了。</p>
+  <p class="note">本頁為個人研究整理，不構成投資建議；下面「什麼情況我不進」那一段請務必一併看完。</p>
+
+  <!-- ── 一 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">01</span>
+      <span class="n">量：先確認真的有錢進來</span>
+      <span class="ex">VOLUME</span>
+      <span class="tag">最重要的一個</span>
+    </div>
+
+    <p class="intro"><b>一句話</b>｜價格會騙人，量比較難騙。同樣漲 20%，有量的漲跟沒量的漲，是兩件完全不同的事。</p>
+
+    <h2>為什麼量比價格可信</h2>
+    <ul>
+      <li><b>價格只要少數人就推得動。</b>成交量低的時候，買盤薄、賣盤也薄，一筆單就能把價格拉上去一截。你在圖上看到一根很漂亮的長紅，實際上可能只是沒人在賣而已。</li>
+      <li><b>量代表有多少錢真的換手了。</b>成交量是那段期間實際成交的數量。量放大表示有一批新的錢願意在這個價位接手——那才是「行情」，不是「跳動」。</li>
+      <li><b>沒量的上漲，回頭也一樣快。</b>推上去的錢很少，代表撐住它的錢也很少。這種漲勢我不追，不是因為它不會漲，是因為我沒有辦法判斷該在哪裡停損。</li>
+    </ul>
+
+    <h2>怎麼看（三步，五分鐘）</h2>
+    <ul>
+      <li><b>第一步：把圖切到週線。</b>日線的量每天跳來跳去，雜訊太多。週線一根＝一週，看得出趨勢。</li>
+      <li><b>第二步：把成交量指標打開。</b>TradingView、券商 App、交易所 App 的指標清單裡搜 <span class="num">Volume</span> 就有，參數用預設的不用調。加上去之後圖表下方會多一條柱狀圖。</li>
+      <li><b>第三步：拿最近這幾根跟過去一年比。</b>不用算精確的倍數，用眼睛看就夠了——把畫面拉到看得到過去一年，最近這幾根明顯比那一整片高出一截，就是有量；跟旁邊差不多或更矮，就是沒量。想要精確一點，成交量指標可以加一條移動平均線（預設就有），柱子高過那條線一倍以上就是了。</li>
+    </ul>
+
+    <figure>
+      <img src="img/btc-weekly-volume.png" alt="比特幣週線圖，下方為成交量" width="1900" height="1305" loading="lazy" decoding="async">
+      <figcaption>比特幣／USDT 週線（Binance），截圖時間 2026 年 8 月 25 日，圖上顯示的收盤為 80,550。下方那排就是成交量。</figcaption>
+    </figure>
+
+    <h2>這張圖在說什麼</h2>
+    <ul>
+      <li><b>2022 到 2023 那一片橘色柱又高又密。</b>那段是價格最低的時候，但成交量是整張圖最大的——一堆人在那個位置換手。事後看，那裡就是底部區。</li>
+      <li><b>2024 之後整條量帶就扁下去了。</b>可是價格在那之後還一路往上衝，2025 年還創了新高。<b>價格創新高、量卻沒跟上</b>——這種背離我會很小心，因為它代表把價格推上去的錢，比前一波少很多。</li>
+      <li><b>最右邊這一根拉上來了，但量還是貼在地上。</b>所以我到現在都還沒開槓桿部位，手上還是現貨。我在等的就是下面那排柱子先站起來——它站起來，我才會相信這一波後面有錢。</li>
+    </ul>
+
+    <p class="fact"><b>補充</b>｜「無量上漲」不等於「一定會跌」。它只是代表這一段行情的參與者少、你能拿到的資訊少。有些標的可以無量漲很久，一路把不信的人甩在後面。這個條件過濾掉的是「我看不懂的行情」，不是「會跌的行情」。</p>
+    <p class="risk">風險提醒｜量放大也可能是出貨。高檔爆量長黑，那是有人在大量賣給你。所以量不能單獨看，一定要配下一項的位階——<b>低檔爆量比較像進場，高檔爆量比較像離場。</b></p>
+  </section>
+
+  <!-- ── 二 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">02</span>
+      <span class="n">位階：買剛起漲的，不買漲到右上角的</span>
+      <span class="ex">POSITION</span>
+      <span class="tag">決定風險大小</span>
+    </div>
+
+    <p class="intro"><b>一句話</b>｜同一個標的、同一個題材，在起漲點買跟在右上角買，是完全不同的兩筆交易。</p>
+
+    <h2>我怎麼判斷「剛起漲」</h2>
+    <ul>
+      <li><b>前面有一段橫著走的盤整。</b>價格上上下下但沒有明顯方向，走了一陣子，然後帶著量往上突破。這種型態我最喜歡，因為盤整那段就是換手的過程，籌碼已經換過一輪了。</li>
+      <li><b>離那段盤整區的上緣不遠。</b>剛突破、還在附近，那就是還早。已經離開盤整區一大段、中間沒有任何回檔，那就是晚了。</li>
+      <li><b>不是「便宜」，是「早」。</b>這兩個不一樣。跌 80% 的東西很便宜，但它可能還在下坡；剛突破的東西不便宜，可是它在上坡的起點。我現在買的是後者。</li>
+    </ul>
+
+    <h2>這是我改過來的地方</h2>
+    <ul>
+      <li><b>以前我只買跌深的。</b>覺得跌得多就是機會，看到綠的就想接。結果一直在「買低賣更低」——接住的東西繼續跌，然後在最痛的時候被洗出去。</li>
+      <li><b>玩《大富翁 4》的時候想通的。</b>那個遊戲贏的關鍵是股市不是買房子。我一開始照現實的習慣買便宜的股票，結果跟現實一樣，便宜的還會更便宜。後來改成買正在漲的、漲的留著跌的換掉——就一直贏。</li>
+      <li><b>不代表不能抄底，代表要分清楚在做哪一件事。</b>抄底是賭反轉，追勢是跟著已經發生的事走。兩種都可以做，但用的條件不一樣，錢也要分開算。</li>
+    </ul>
+
+    <p class="fact"><b>補充</b>｜這頁講的是追勢型的進場。如果你要做的是另一種——「跌下來了要不要接」——那是另一套判斷，我寫在<a href="https://btcto1m.com/20260813dca/">分批進場怎麼分</a>那頁，裡面講的是 KD 低於 20 才啟動那一套。兩頁是左右手，不要混著用。</p>
+    <p class="risk">風險提醒｜「剛起漲」是事後才看得出來的。當下你只知道它突破了，不知道這是真突破還是假突破——假突破（衝出去又跌回盤整區）很常見。所以進場之後價格跌回盤整區裡面，就是這個判斷錯了，該認就認，不要凹成長期投資。</p>
+  </section>
+
+  <!-- ── 三 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">03</span>
+      <span class="n">題材：講得出一句話為什麼是現在</span>
+      <span class="ex">CATALYST</span>
+      <span class="tag">最容易被跳過</span>
+    </div>
+
+    <p class="intro"><b>一句話</b>｜如果你講不出它為什麼漲，那你也不會知道它為什麼跌，到時候就只能靠猜的。</p>
+
+    <h2>我在找什麼</h2>
+    <ul>
+      <li><b>具體的事，不是氛圍。</b>「AI 很紅」不算，「這家簽了一筆多大的訂單」「這一季營收年增多少」「這個產業的循環轉上來了」才算。要具體到你可以講給朋友聽。</li>
+      <li><b>熱門產業優先。</b>我只看現在有錢在流進去的產業，這幾年就是 AI 那一串。醫療、食品那種我沒興趣——不是它們不好，是我對它們沒有判斷力。</li>
+      <li><b>能講出來，就守得住。</b>買進的理由寫下來，之後每次它跌你都可以回去對一次：那個理由還在嗎？還在就抱著，不在了就走。這比看著紅綠決定要不要停損可靠太多。</li>
+    </ul>
+
+    <p class="fact"><b>補充</b>｜三個條件裡這個最主觀，也最容易自我說服——想買的時候，故事總是編得出來。所以我的順序固定是先看量、再看位階、最後才問題材。<b>前兩個是客觀的，讓它們先擋一輪。</b></p>
+  </section>
+
+  <!-- ── 不進場 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">04</span>
+      <span class="n">什麼情況我不進</span>
+      <span class="ex">SKIP</span>
+      <span class="tag">這段比上面重要</span>
+    </div>
+
+    <p class="body" style="margin-top:20px">上面三條是「什麼時候可以」，這三條是「什麼時候我會放過它」。放過一檔的成本只是沒賺到，追錯一檔的成本是真的賠錢——這兩件事不對等，所以我寧可標準嚴一點。</p>
+
+    <h2>三種我會直接跳過</h2>
+    <ul>
+      <li><b>無量創新高。</b>價格上去了，下面的量沒有跟上。這種我不碰，因為我看不出來誰在買、也就抓不到它會在哪裡停。</li>
+      <li><b>已經連漲很久、中間完全沒回檔。</b>不是說它不會再漲，是說我進去之後第一個回檔就會把我洗掉——沒有回檔過的走勢，你不知道它的支撐在哪，停損就無處可放。</li>
+      <li><b>只有故事、沒有量也沒有價。</b>消息滿天飛但圖上什麼都沒發生。這種通常是還沒開始，或是根本不會開始，兩種我都寧可等它動了再說。</li>
+    </ul>
+
+    <p class="risk">風險提醒｜這套規則有一個很實在的代價：<b>你會眼睜睜看著一堆行情走掉。</b>條件沒到就是不進，而條件常常不到。我自己這個月就錯過一整段，看著很可惜。接受不了這件事的話，這套規則不適合你——但我寧可錯過，也不想再經歷一次被槓桿掃出場然後看它漲六倍。</p>
+  </section>
+
+  <!-- ── 之後 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">05</span>
+      <span class="n">三個都過了，然後呢</span>
+      <span class="ex">NEXT</span>
+      <span class="tag">接下一頁</span>
+    </div>
+
+    <p class="body" style="margin-top:20px">訊號到了只解決「可以開始了」，沒有解決「錢怎麼放進去」。我不會一次全押——條件全過的時候我也還是分批，因為判斷對不對是要時間證明的，一次押完就沒有修正的機會了。</p>
+
+    <ul>
+      <li><b>先決定這一筆總共要放多少。</b>先有總額，才有每次買多少。沒設總額的分批會愈買愈多，最後變成全押。</li>
+      <li><b>再決定分幾次、多久買完。</b>我的做法是抓一季，分成三到四個月慢慢買。</li>
+      <li><b>買完就停，不要因為它繼續漲又追加。</b>追加是新的一筆交易，要重新跑一次上面那三個條件。</li>
+    </ul>
+
+    <p class="fact"><b>怎麼分批寫在另一頁</b>｜總額怎麼抓、一季要除以幾、每次買多少（有查表）、還有其他四種分批方式的對照，都在 <a href="https://btcto1m.com/20260813dca/">分批進場怎麼分：一季的錢，每天買一點</a>。這頁決定「開不開始」，那頁決定「開始之後怎麼買」。</p>
+  </section>
+
+  <!-- ── 結尾行動區。定版文案，不要改寫 ── -->
+  <section class="cta">
+    <div class="copy">
+      <h2>加入 Telegram 頻道！</h2>
+      <p>有好的進出場時機時，會第一時間在 Telegram 內通知。</p>
+      <p>只要註冊 LBank 交易所（只需一分鐘即可完成註冊），就可以免費加入這個頻道，還會加碼贈送價值 100 美元的交易指標！</p>
+      <a class="btn" href="https://t.me/acssun_bot" rel="noopener">免費加入 Telegram 頻道 <span class="arrow" aria-hidden="true">→</span></a>
+      <p class="btnurl">https://t.me/acssun_bot</p>
+    </div>
+    <div class="shot">
+      <img src="img/telegram-channel.jpg" alt="Telegram 頻道畫面截圖" width="203" height="440" loading="lazy" decoding="async">
+    </div>
+  </section>
+
+  <footer>
+    本頁為個人研究整理，不構成投資建議，請自行判斷並承擔風險。<br>
+    © 2026 <a href="https://btcto1m.com">BTCto1M LLC</a>
+  </footer>
+
+</main>
+</body>
+</html>

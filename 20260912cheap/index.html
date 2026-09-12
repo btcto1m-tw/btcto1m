@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>便宜有兩種｜BTCto1M</title>
+<meta name="description" content="便宜有兩種，貴也有兩種。分便宜看有沒有量，分貴看漲多久了。個人研究整理，不構成投資建議。">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="BTCto1M">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="便宜有兩種">
+<meta property="og:description" content="好的便宜、壞的便宜、好的貴、壞的貴。分不出來的時候，便宜還會更便宜。">
+<meta property="og:url" content="https://btcto1m.com/20260912cheap/">
+<meta property="og:image" content="https://btcto1m.com/20260912cheap/img/btc-weekly-quadrant.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="便宜有兩種">
+<meta name="twitter:description" content="好的便宜、壞的便宜、好的貴、壞的貴。分不出來的時候，便宜還會更便宜。">
+<meta name="twitter:image" content="https://btcto1m.com/20260912cheap/img/btc-weekly-quadrant.png">
+<link rel="canonical" href="https://btcto1m.com/20260912cheap/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --gold:oklch(0.55 0.15 75);
+    --gold-soft:oklch(0.96 0.04 85);
+    --gold-line:oklch(0.9 0.03 85);
+    --ink:oklch(0.24 0.008 250);
+    --sub:oklch(0.5 0.01 250);
+    --sans:'Noto Sans TC',-apple-system,'PingFang TC','Helvetica Neue',Arial,sans-serif;
+    --serif:'Noto Serif TC',Georgia,'Songti TC','Times New Roman',serif;
+    --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:var(--sans);color:var(--ink);background:#fff;overflow-wrap:break-word}
+  a{color:oklch(0.45 0.13 75)}
+  a:hover{color:oklch(0.35 0.1 75)}
+  main{max-width:860px;margin:0 auto;padding:40px 20px 56px}
+
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(26px,6vw,34px);line-height:1.25;margin:0 0 10px;letter-spacing:-0.01em}
+  .lede{font-size:15px;line-height:1.6;margin:0;color:var(--sub)}
+  .rule{height:2px;background:var(--gold);margin:20px 0 24px}
+
+  .table-wrap{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{width:100%;min-width:760px;border-collapse:collapse;font-size:12.5px}
+  th{padding:8px;background:var(--gold-soft);border-bottom:1.5px solid var(--gold);font-weight:700;text-align:left;white-space:nowrap}
+  td{padding:9px 8px;border-bottom:1px solid var(--gold-line);vertical-align:top}
+  .num{font-family:var(--mono)}
+  .sym{font-family:var(--mono);font-weight:500;white-space:nowrap}
+  .pct{font-family:var(--mono);font-weight:500;text-align:right;color:var(--gold);white-space:nowrap}
+  th:last-child{text-align:right}
+
+  .note{font-size:12.5px;line-height:1.65;margin:18px 0 6px;color:var(--sub)}
+  .note:last-of-type{margin-bottom:0}
+
+  section.item{margin-top:52px}
+  .head{display:flex;align-items:baseline;gap:10px 14px;flex-wrap:wrap;border-bottom:2px solid var(--gold);padding-bottom:10px}
+  .head .t{font-family:var(--mono);font-size:clamp(24px,7vw,30px);font-weight:500;letter-spacing:0.02em}
+  .head .n{font-family:var(--serif);font-size:clamp(16px,4.5vw,19px);font-weight:500}
+  .head .ex{font-size:12px;color:var(--sub);letter-spacing:0.06em}
+  .head .tag{margin-left:auto;font-size:13px;font-weight:500;padding:4px 10px;background:var(--gold-soft);color:oklch(0.4 0.1 75)}
+
+  .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:oklch(0.85 0.06 85);margin-top:1px}
+  .stats>div{background:oklch(0.985 0.014 85);padding:12px 14px}
+  .stats .k{font-size:11.5px;color:var(--sub);margin-bottom:4px}
+  .stats .v{font-size:16px;font-weight:500}
+  .stats .v.num{font-family:var(--mono)}
+  .stats .sub{font-size:11px;color:var(--sub);margin-top:4px;line-height:1.45}
+  .up{font-size:12.5px;color:var(--gold)}
+  .down{font-size:12.5px;color:oklch(0.55 0.13 25)}
+
+  .intro{font-size:14.5px;line-height:1.75;margin:20px 0 0;padding:14px 16px;background:oklch(0.98 0.006 250);border:1px solid var(--gold-line)}
+  .intro b{font-weight:700;font-family:var(--serif)}
+  figure{margin:22px 0 0}
+  figure img{display:block;width:100%;height:auto;border:1px solid var(--gold-line)}
+  figcaption{font-size:12px;line-height:1.6;color:var(--sub);margin-top:8px}
+
+  h2{font-family:var(--serif);font-size:17px;font-weight:700;margin:24px 0 10px}
+  ul{margin:0;padding-left:20px;font-size:14.5px;line-height:1.7}
+  li{margin-bottom:8px}
+  li:last-child{margin-bottom:0}
+  p.body{font-size:14.5px;line-height:1.75;margin:0 0 12px}
+  .fact{font-size:13.5px;line-height:1.7;margin:18px 0 0;padding:12px 14px;background:oklch(0.975 0.012 250);border-left:3px solid oklch(0.55 0.08 250)}
+  .fact b{font-weight:700}
+  .risk{font-size:13.5px;line-height:1.7;margin:12px 0 0;padding:12px 14px;background:oklch(0.97 0.03 85);border-left:3px solid var(--gold)}
+
+  .cta{margin-top:56px;border-top:2px solid var(--gold);padding-top:24px;display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap}
+  .cta .copy{flex:1 1 300px;min-width:0}
+  .cta h2{margin-top:0;font-size:19px}
+  .cta p{font-size:14.5px;line-height:1.75;margin:0 0 12px}
+  .cta .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    margin-top:6px;padding:16px 30px;
+    font-size:17px;font-weight:700;line-height:1;
+    color:#fff;background:var(--gold);border:0;border-radius:999px;
+    text-decoration:none;cursor:pointer;
+    box-shadow:0 4px 14px oklch(0.55 0.15 75/.35);
+    transition:background .12s ease,transform .12s ease,box-shadow .12s ease;
+  }
+  .cta .btn:hover{color:#fff;background:oklch(0.48 0.15 75);transform:translateY(-2px);box-shadow:0 8px 22px oklch(0.55 0.15 75/.45)}
+  .cta .btn:active{transform:translateY(0);box-shadow:0 3px 10px oklch(0.55 0.15 75/.4)}
+  .cta .btn:focus-visible{outline:3px solid oklch(0.45 0.13 75);outline-offset:3px}
+  .cta .btn .arrow{font-size:19px;line-height:1}
+  .cta .btnurl{margin:12px 0 0;font-family:var(--mono);font-size:12px;color:var(--sub);overflow-wrap:anywhere}
+  .cta .shot{flex:0 1 200px;max-width:200px}
+  .cta .shot img{display:block;width:100%;height:auto;border-radius:10px}
+
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--gold-line);font-size:12.5px;color:var(--sub);line-height:1.7}
+  footer a{color:var(--gold)}
+
+  @media (max-width:640px){
+    .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  @media (max-width:520px){
+    main{padding:28px 16px 44px}
+    .head .tag{margin-left:0;width:100%}
+    .cta .btn{width:100%}
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>便宜有兩種</h1>
+  <p class="lede">貴也有兩種。我怎麼分好的那一種跟壞的那一種 ｜ 整理日期：2026 年 9 月 12 日</p>
+  <div class="rule"></div>
+
+  <p class="intro"><b>先講一件我以前做錯的事</b>｜我只敢買跌下來的。愈跌愈買，覺得便宜就是機會，至少它會漲回原本那個價，我至少賺到那一段。<b>我用這個邏輯買了八年，一支都沒賺到。</b>後來我才發現，問題不在便宜還是貴，在我根本分不出來是哪一種便宜、哪一種貴。</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th></th><th>長什麼樣子</th><th>我會做什麼</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><b>好的便宜</b></td><td>價格在相對低檔，<b>但量進來了</b></td><td>分批撿</td></tr>
+      <tr><td><b>壞的便宜</b></td><td>價格在相對低檔，<b>而且沒有量</b></td><td>不碰。便宜還會更便宜</td></tr>
+      <tr><td><b>好的貴</b></td><td>才剛起漲，一兩天到一兩週</td><td>可以進，這不叫追高</td></tr>
+      <tr><td><b>壞的貴</b></td><td>已經漲一段時間了</td><td>不碰。這才叫追高</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">說明：這四種是我自己在用的分法，不是市場公認的名詞。分辨便宜的好壞看的是「有沒有量」，分辨貴的好壞看的是「漲多久了」，兩把尺不一樣，下面分開講。</p>
+
+  <p class="risk">本頁為個人研究整理，不構成投資建議；最後一段「這套分法的代價」請務必一併看完。</p>
+
+  <!-- ── 01 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">01</span>
+      <span class="n">好的便宜：在跌，但有人在接</span>
+      <span class="ex">GOOD CHEAP</span>
+      <span class="tag">可以分批撿</span>
+    </div>
+
+    <p class="intro"><b>一句話</b>｜便宜不是重點，有沒有人陪你一起買才是重點。</p>
+
+    <h2>我在找什麼</h2>
+    <ul>
+      <li><b>價格在相對低檔。</b>用均線或 KD 判斷，現在的價格明顯低於這段時間買進的人的平均成本。</li>
+      <li><b>而且量進來了。</b>低檔橫盤的那段出現特別高的量柱，代表有一批新的錢願意在這個位置接手。那是換手，不是下跌。</li>
+      <li><b>這種我抱得住。</b>因為我知道我跟有眼光的人站在一起。就算它買完之後在那邊橫盤，甚至短暫跌破我的成本，我也不會慌著出場。</li>
+    </ul>
+
+    <h2>怎麼買</h2>
+    <ul>
+      <li><b>有量但還沒突破盤整區間，就分批進。</b>我不會一次打完，因為我不知道它還要橫多久。</li>
+      <li><b>突破了盤整區間，剩下的一次打進去。</b>這時候不用再分批了。</li>
+      <li><b>分幾批看我在做長線還是短線。</b>長線佈局分一到兩季，短線兩週到一個月。<a href="https://btcto1m.com/20260813dca/">分批進場怎麼分</a>那頁有完整的算法。</li>
+    </ul>
+
+    <p class="fact">補充｜<b>「有量」要看連續，不是看單週。</b>單獨一週爆量配一根長紅，資訊還不夠。我要的是連兩週以上，或者是<b>帶著量但價格橫著走</b>那種——那才是真的在換手。</p>
+  </section>
+
+  <!-- ── 02 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">02</span>
+      <span class="n">壞的便宜：在跌，而且沒人接</span>
+      <span class="ex">BAD CHEAP</span>
+      <span class="tag">我不碰</span>
+    </div>
+
+    <p class="intro"><b>一句話</b>｜便宜還會更便宜。沒有量的低檔，我沒有辦法判斷底在哪裡。</p>
+
+    <h2>為什麼沒量的便宜不能碰</h2>
+    <ul>
+      <li><b>沒有量，代表沒有人在接。</b>價格會跌只要沒人買就夠了。你看到一根很便宜的價格，可能只是賣壓還沒出完。</li>
+      <li><b>它可能一年後才漲。</b>而那一年很磨人。最磨的不是它不動，是那一年隔壁一直在噴，你手上這支動都不動，然後你就會開始換方法。</li>
+      <li><b>你抱不住。</b>沒量的時候你沒有任何依據，只能靠信心撐，而信心會被價格慢慢磨掉。</li>
+    </ul>
+
+    <h2>我自己踩過最痛的一次</h2>
+    <ul>
+      <li><b>那次是 Meta。</b>它從三百跌到兩百，我看 KD 已經在低檔就進去了。但低檔還可以更低，我遇到的就是這個。</li>
+      <li><b>我還開了槓桿。</b>原本的計畫很清楚：碰到清算價就入金攤平。結果它真的碰到的時候，我沒有照計畫做，我跑去問別人，別人叫我砍，我就砍了。</li>
+      <li><b>我砍在最低點，後來它一路漲到六百。</b>最痛的不是虧那筆錢，是我後來發現我砍掉的理由不是害怕，<b>是我看不懂，所以我覺得很煩</b>。</li>
+      <li><b>那次教會我兩件事。</b>一是低檔要配著量看，二是沒有十足的把握就不要開槓桿——光是抱現貨都會煩了。</li>
+    </ul>
+
+    <p class="risk">風險提醒｜<b>「沒量的便宜」不等於「一定不會漲」。</b>它只代表我看不懂，所以我不做。有些標的真的可以無量磨很久然後翻上去，那種行情不在我的守備範圍，我就讓它走掉。</p>
+  </section>
+
+  <!-- ── 03 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">03</span>
+      <span class="n">好的貴：才剛起漲</span>
+      <span class="ex">GOOD EXPENSIVE</span>
+      <span class="tag">這不叫追高</span>
+    </div>
+
+    <p class="intro"><b>一句話</b>｜同一個標的、同一個題材，在起漲點買跟在右上角買，是完全不同的兩筆交易。</p>
+
+    <h2>我怎麼判斷「剛起漲」</h2>
+    <ul>
+      <li><b>前面有一段橫著走的盤整。</b>價格上上下下但沒有明顯方向，走了一陣子，然後帶著量往上突破。盤整那段就是換手的過程。</li>
+      <li><b>離盤整區的上緣不遠。</b>剛突破、還在附近，那就是早。已經離開一大段、中間完全沒有回檔，那就是晚了。</li>
+      <li><b>時間大概是一兩天到一兩週。</b>不是精確的規則，是一個量級的概念。</li>
+      <li><b>重點不是「便宜」，是「早」。</b>這兩個不一樣。跌八成的東西很便宜，但它可能還在下坡；剛突破的東西不便宜，可是它在上坡的起點。</li>
+    </ul>
+
+    <h2>我是怎麼改過來的</h2>
+    <ul>
+      <li><b>玩《大富翁 4》的時候想通的。</b>那個遊戲裡有一個股市，我一開始照現實的習慣挑便宜的買，結果跟現實一樣，怎麼玩怎麼輸。</li>
+      <li><b>我很不爽，就決定跟自己對做。</b>改成只買紅字的、只買正在漲的，把錢平均分成五份，哪一支翻綠就賣掉，賣掉的錢再分回剩下的。</li>
+      <li><b>規則就這麼簡單，但我後來永遠第一名。</b>那天我才發現，現實世界的規則好像也是這樣。</li>
+    </ul>
+  </section>
+
+  <!-- ── 04 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">04</span>
+      <span class="n">壞的貴：已經漲一段時間了</span>
+      <span class="ex">BAD EXPENSIVE</span>
+      <span class="tag">這才叫追高</span>
+    </div>
+
+    <p class="intro"><b>一句話</b>｜你買的是別人的獲利了結對手單。</p>
+
+    <h2>長什麼樣子</h2>
+    <ul>
+      <li><b>已經離開起漲點一大段。</b>中間幾乎沒有像樣的回檔，一路衝上來。</li>
+      <li><b>價格在高檔開始橫著走，而且量在縮。</b>想買的人買得差不多了，推它上來的錢在退場。這時候進去，你接的是別人要出的貨。</li>
+      <li><b>高檔爆量長黑更要小心。</b>那不是有人在搶進，是有人在大量賣給你。<b>低檔爆量比較像進場，高檔爆量比較像離場</b>，同一個訊號在不同位置意思完全相反。</li>
+    </ul>
+
+    <figure>
+      <img src="img/btc-weekly-quadrant.png" alt="比特幣兌美元週線圖，2024 到 2026，下方為成交量" width="1922" height="1318" loading="lazy" decoding="async">
+      <figcaption>比特幣／美元週線（Kraken），截圖時間 2026 年 9 月 3 日。下方那排是成交量，藍線是均量。</figcaption>
+    </figure>
+
+    <h2>這張圖上四種都有</h2>
+    <ul>
+      <li><b>2024 那一整片是好的貴。</b>價格一路往上，下面的量柱一根接一根站在均量線上面。有量的上漲，中間任何一次回檔後的突破都是可以進的位置。</li>
+      <li><b>2025 年七月之後是壞的貴。</b>價格在十一萬到十二萬五之間做了雙頭、橫了好幾個月，可是量柱明顯縮下去。<b>價格還在高檔，錢已經在退。</b>然後 2026 就跌破了，一路掉到六萬附近。</li>
+      <li><b>2026 上半年那段下坡就是壞的便宜。</b>愈來愈便宜，但量一直起不來。那段路上每一次「看起來夠便宜了」，後面都還有更便宜。</li>
+      <li><b>最右邊那根量拉起來了，但只有一週。</b>所以我到現在還是只有現貨，沒開槓桿。我在等的是連兩週，或者帶量但價格橫著走的那種。</li>
+    </ul>
+  </section>
+
+  <!-- ── 05 ── -->
+  <section class="item">
+    <div class="head">
+      <span class="t">05</span>
+      <span class="n">這套分法的代價</span>
+      <span class="ex">TRADE-OFF</span>
+      <span class="tag">先看完再用</span>
+    </div>
+
+    <ul>
+      <li><b>你會錯過一堆行情。</b>條件沒到就是不進，而條件常常不到。無量噴上去的那些我全部拿不到。</li>
+      <li><b>「剛起漲」是事後才看得出來的。</b>當下你只知道它突破了，不知道這是真突破還是假突破。所以短線我進場的同時就會設好停損，被打到就走。</li>
+      <li><b>好的便宜會讓你等很久。</b>低檔有量不代表它明天就漲，可能還要橫好幾個月。</li>
+      <li><b>這四種分法只適用追勢型的短線與波段。</b>長期存股是另一套，兩種混著用我吃過虧。</li>
+    </ul>
+
+    <p class="fact"><b>這一頁決定「買哪一種」。</b>判斷有沒有量、要不要開始買，在 <a href="https://btcto1m.com/20260825volume/">追高之前先看量</a>；開始之後怎麼分批買，在 <a href="https://btcto1m.com/20260813dca/">分批進場怎麼分</a>；什麼時候該走，在 <a href="https://btcto1m.com/20260902exit/">賣掉之後它才漲</a>。四頁是同一套系統的四段。</p>
+  </section>
+
+  <section class="cta">
+    <div class="copy">
+      <h2>加入 Telegram 頻道！</h2>
+      <p>有好的進出場時機時，會第一時間在 Telegram 內通知。</p>
+      <p>只要註冊 LBank 交易所（只需一分鐘即可完成註冊），就可以免費加入這個頻道，還會加碼贈送價值 100 美元的交易指標！</p>
+      <a class="btn" href="https://t.me/acssun_bot" rel="noopener">免費加入 Telegram 頻道 <span class="arrow" aria-hidden="true">→</span></a>
+      <p class="btnurl">https://t.me/acssun_bot</p>
+    </div>
+    <div class="shot">
+      <img src="img/telegram-channel.jpg" alt="Telegram 頻道畫面截圖" width="203" height="440" loading="lazy" decoding="async">
+    </div>
+  </section>
+
+  <footer>
+    本頁為個人研究整理，不構成投資建議，請自行判斷並承擔風險。<br>
+    © 2026 <a href="https://btcto1m.com">BTCto1M LLC</a>
+  </footer>
+
+</main>
+</body>
+</html>
