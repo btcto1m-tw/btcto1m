@@ -1,6 +1,6 @@
 // 換紅包時只改這個檔最上面的 TOKEN。所有平台專屬網址（ig/tt/yt/th）都讀這一份。
   // ── 換紅包時只改這一行的 TOKEN ──────────────────────────────
-  var TOKEN = "GDGUT7DS";
+  var TOKEN = "UQWF8G95";
   // ───────────────────────────────────────────────────────────
   var BASE = "https://link.pionex.com/?url=https%3A%2F%2Fwww.pionex.com%2F";
   var TAIL = "%2Fred-packet&referral=BTCto1M&page=RedPacket&redPacketToken=" + TOKEN;
