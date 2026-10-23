@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>隱私政策 · 訂單簿 Order Book</title>
+  <meta name="description" content="訂單簿 Order Book 隱私政策。說明我們蒐集哪些資料、存放在哪裡、誰看得到，以及如何刪除。" />
+  <meta name="theme-color" content="#b4552d" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#17150f" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="/orderbook/icon.svg" type="image/svg+xml" />
+  <style>
+    :root{--bg:#f5f4f0;--card:#ffffff;--ink:#221f1a;--muted:#7d766c;--brand:#b4552d;--brand-ink:#9a4522;--line:#e2ded6;--accent:#c8922f}
+    @media (prefers-color-scheme: dark){:root{--bg:#17150f;--card:#221f19;--ink:#f1ece2;--muted:#a89f92;--brand:#e08b58;--brand-ink:#f0a877;--line:#3a352d;--accent:#d9a94e}}
+    *{box-sizing:border-box}html,body{margin:0}
+    body{background:var(--bg);color:var(--ink);line-height:1.75;
+      font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:720px;margin:0 auto;padding:56px 24px 80px}
+    a.back{color:var(--brand);text-decoration:none;font-size:14px}
+    h1{font-size:30px;margin:20px 0 6px;letter-spacing:-.02em}
+    .updated{color:var(--muted);font-size:14px;margin-bottom:8px}
+    .tldr{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);
+      border-radius:12px;padding:18px 20px;margin:24px 0;font-size:15px}
+    .tldr strong{color:var(--brand-ink)}
+    h2{font-size:19px;margin:36px 0 10px;letter-spacing:-.01em}
+    p,li{color:var(--ink)}
+    .muted{color:var(--muted)}
+    ul{padding-left:20px}li{margin:6px 0}
+    .items{margin:16px 0}
+    .item{background:var(--card);border:1px solid var(--line);border-radius:12px;
+      padding:14px 16px;margin-bottom:10px}
+    .item h3{margin:0 0 4px;font-size:16px}
+    .item p{margin:0;font-size:15px}
+    .item .why{color:var(--muted);font-size:14px;margin-top:4px}
+    .warn{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+      border-radius:12px;padding:16px 20px;margin:20px 0;font-size:14px;color:var(--muted)}
+    .warn strong{color:var(--ink)}
+    footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+    footer a{color:var(--brand);text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="/orderbook">← 訂單簿 Order Book</a>
+    <h1>隱私政策</h1>
+    <div class="updated">訂單簿 · Order Book｜最後更新：2026 年 8 月 5 日</div>
+
+    <div class="tldr">
+      <strong>一句話：</strong>訂單簿是店家內部使用的工具。你輸入的訂單資料存放在受保護的雲端資料庫，
+      只有同一個店號底下的成員看得到。我們不販售、不分享資料，也沒有廣告或追蹤。
+    </div>
+
+    <h2>一、我們蒐集哪些資料</h2>
+    <p>訂單簿需要把資料存在雲端，才能讓店裡的多台裝置看到同一份訂單。我們蒐集的內容全部來自你在 App 內主動輸入：</p>
+    <div class="items">
+      <div class="item">
+        <h3>店家資料</h3>
+        <p>店號、店名</p>
+        <p class="why">用途：辨識這是哪一間店</p>
+      </div>
+      <div class="item">
+        <h3>成員資料</h3>
+        <p>成員名字、手機號碼</p>
+        <p class="why">用途：登入驗證，以及知道訂單是誰建立的</p>
+      </div>
+      <div class="item">
+        <h3>客戶資料</h3>
+        <p>客人電話（必填）、客人姓名（選填）</p>
+        <p class="why">用途：取貨時用電話查詢訂單</p>
+      </div>
+      <div class="item">
+        <h3>訂單內容</h3>
+        <p>品項、數量、金額、取貨日期時間、付款狀態、備註</p>
+        <p class="why">用途：App 的核心功能</p>
+      </div>
+    </div>
+    <p class="muted">我們不蒐集你的位置、通訊錄、相簿、瀏覽紀錄，也不使用任何廣告或分析追蹤 SDK。</p>
+
+    <h2>二、關於你輸入的客人資料</h2>
+    <div class="warn">
+      <strong>你在訂單裡填入的客人電話與姓名，屬於你（店家）的客戶個人資料。</strong>
+      我們僅代為儲存與提供查詢功能，不會用於任何其他用途。
+      身為店家，請確保你蒐集與使用這些資料的方式符合當地個人資料保護相關法規，
+      並僅將 App 內的資料用於處理訂單與取貨。
+    </div>
+
+    <h2>三、資料存放在哪裡</h2>
+    <p>資料儲存於 Supabase 提供的 PostgreSQL 資料庫（伺服器位於日本東京區域）。所有連線都經過 HTTPS 加密傳輸。</p>
+    <p>資料庫啟用了資料列層級的存取控制（Row Level Security）：<strong>每一筆訂單都綁定所屬店號，只有通過該店號登入驗證的成員才讀取得到</strong>。不同店家之間的資料完全隔離，彼此看不到對方的訂單。</p>
+
+    <h2>四、誰看得到你的資料</h2>
+    <ul>
+      <li><strong>你店裡的成員：</strong>由店長在 App 內加入名單的人，都能看到該店家的全部訂單。</li>
+      <li><strong>我們（btcto1m LLC）：</strong>僅在你主動來信要求技術協助時，於必要範圍內存取，處理完畢即停止。</li>
+      <li><strong>第三方：</strong>除了上述資料庫服務商 Supabase 作為技術服務提供者之外，我們不會將資料提供、出售或分享給任何第三方，也不用於行銷。</li>
+    </ul>
+
+    <h2>五、登入與安全</h2>
+    <p>訂單簿不使用 Email 或密碼登入，改以「店號 + 個人手機號碼」驗證身分，這是為了讓不熟悉智慧型手機的年長使用者也能順利使用。手機號碼必須事先由店長加入成員名單，未在名單上的號碼無法登入。</p>
+    <p class="muted">請店家自行留意：知道店號與某位成員手機號碼的人可能得以登入。若有成員離職，請儘速到「設定 → 店裡的人」將其移除。</p>
+
+    <h2>六、資料保留與刪除</h2>
+    <ul>
+      <li>訂單採「作廢」而非直接刪除，作廢後不會顯示在清單與統計中，但紀錄仍保留在資料庫，以避免誤按造成帳目落差。</li>
+      <li>你可以隨時來信要求<strong>永久刪除整間店家的所有資料</strong>（包含訂單、客戶資料與成員名單）。我們會在收到請求並確認身分後 30 天內完成刪除。</li>
+      <li>移除 App 不會刪除雲端資料，因為店裡其他成員可能仍在使用。需要刪除請來信告知。</li>
+    </ul>
+
+    <h2>七、兒童</h2>
+    <p class="muted">本 App 為商業用途工具，並非為兒童設計，也不會刻意蒐集兒童的個人資料。</p>
+
+    <h2>八、政策更新</h2>
+    <p class="muted">若本政策有更新，我們會修改本頁的「最後更新」日期；重大變更會另行於 App 內告知。</p>
+
+    <h2>九、聯絡我們</h2>
+    <p>隱私相關問題或資料刪除請求，歡迎來信：<a href="mailto:support@btcto1m.com" style="color:var(--brand)">support@btcto1m.com</a></p>
+
+    <footer>
+      訂單簿 · Order Book — 由 btcto1m LLC 開發<br/>
+      <a href="/orderbook">回首頁</a>
+    </footer>
+  </div>
+</body>
+</html>

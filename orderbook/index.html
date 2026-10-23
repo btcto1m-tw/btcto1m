@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>訂單簿 Order Book — 店家訂單與取貨管理</title>
+  <meta name="description" content="給店家用的訂單記錄 App：輸入客人電話後四碼馬上找到訂單，逾期未取自動標紅，今天要出幾份一目瞭然。店裡多人同時使用，即時同步。" />
+  <meta name="theme-color" content="#b4552d" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#17150f" media="(prefers-color-scheme: dark)" />
+  <meta property="og:title" content="訂單簿 Order Book" />
+  <meta property="og:description" content="旺季一天幾百張訂單也不怕。輸入電話後四碼馬上找到訂單。" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/orderbook/icon.svg" type="image/svg+xml" />
+  <style>
+    :root{
+      --bg:#f5f4f0; --card:#ffffff; --ink:#221f1a; --muted:#7d766c;
+      --brand:#b4552d; --brand-ink:#9a4522; --line:#e2ded6; --ok:#2e7d4f;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg:#17150f; --card:#221f19; --ink:#f1ece2; --muted:#a89f92;
+        --brand:#e08b58; --brand-ink:#f0a877; --line:#3a352d; --ok:#74c295;
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      background:var(--bg);color:var(--ink);
+      font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",system-ui,sans-serif;
+      line-height:1.7;-webkit-font-smoothing:antialiased;
+    }
+    .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+    header{padding:72px 0 40px;text-align:center}
+    .logo{display:inline-flex;align-items:center;gap:12px;font-weight:800;font-size:20px;color:var(--brand-ink);margin-bottom:40px}
+    .logo img{width:40px;height:40px;border-radius:22%}
+    h1{font-size:clamp(30px,6vw,46px);line-height:1.25;margin:0 0 16px;letter-spacing:-.02em}
+    .lede{font-size:clamp(17px,2.6vw,20px);color:var(--muted);max-width:540px;margin:0 auto 32px}
+    .cta{display:inline-block;background:var(--brand);color:#fff;font-weight:700;
+      padding:14px 28px;border-radius:999px;text-decoration:none;font-size:16px}
+    .cta.secondary{background:transparent;color:var(--brand);border:1.5px solid var(--line);margin-left:8px}
+    .note{margin-top:18px;font-size:13px;color:var(--muted)}
+    section{padding:44px 0;border-top:1px solid var(--line)}
+    h2{font-size:24px;margin:0 0 24px;letter-spacing:-.01em}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media (max-width:560px){.grid{grid-template-columns:1fr}}
+    .feat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+    .feat .ico{font-size:24px;margin-bottom:8px}
+    .feat h3{margin:0 0 6px;font-size:17px}
+    .feat p{margin:0;color:var(--muted);font-size:15px}
+    .qa{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:12px}
+    .qa h3{margin:0 0 6px;font-size:16px}
+    .qa p{margin:0;color:var(--muted);font-size:15px}
+    .contact{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);
+      border-radius:12px;padding:18px 20px;font-size:15px}
+    .contact a{color:var(--brand);text-decoration:none;font-weight:600}
+    footer{padding:40px 0 64px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+    footer a{color:var(--brand);text-decoration:none}
+    footer .sep{margin:0 8px;opacity:.4}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <img src="/orderbook/icon.svg" alt="" />
+        訂單簿 · Order Book
+      </div>
+      <h1>幾百張訂單裡，<br/>三秒找到那一張。</h1>
+      <p class="lede">客人上門報電話，輸入後四碼馬上調出訂單。逾期沒來拿的自動標紅置頂，今天要出幾份打開就看到。給節慶旺季忙不過來的店家。</p>
+      <a class="cta" href="https://apps.apple.com/tw/app/%E7%B0%A1%E6%98%93%E8%A8%82%E5%96%AE%E7%B0%BF/id6798677065">在 App Store 下載</a>
+      <a class="cta secondary" href="/orderbook/privacy">隱私政策</a>
+      <p class="note">iOS 已上線 · Android 即將推出 · 免費 · 店裡多人同時使用</p>
+    </header>
+
+    <section>
+      <h2>它幫你解決什麼</h2>
+      <div class="grid">
+        <div class="feat"><div class="ico">🔍</div><h3>電話後四碼找單</h3><p>不用翻紙本、不用問是哪天訂的。搜尋時無視日期篩選，一定找得到。</p></div>
+        <div class="feat"><div class="ico">📊</div><h3>今天要出幾份</h3><p>自動加總當天所有訂單的品項數量，備料不再靠人工清點。</p></div>
+        <div class="feat"><div class="ico">🔴</div><h3>逾期未取不會漏</h3><p>過了取貨日還沒來拿的自動標紅，固定在清單最上面，尾款沒收齊也看得到。</p></div>
+        <div class="feat"><div class="ico">📱</div><h3>店裡幾個人一起用</h3><p>各自用手機登入同一間店，誰改了什麼其他人立刻同步，不用重新整理。</p></div>
+        <div class="feat"><div class="ico">🔑</div><h3>不用記帳號密碼</h3><p>輸入店號和自己的手機號碼就進得去，登入一次永久記住。</p></div>
+        <div class="feat"><div class="ico">👀</div><h3>為長輩設計</h3><p>字大、按鈕大，字級可以調到特大，也有深色模式。</p></div>
+      </div>
+    </section>
+
+    <section id="support">
+      <h2>常見問題</h2>
+
+      <div class="qa">
+        <h3>怎麼開始使用？</h3>
+        <p>第一次使用時點「我要開一間新的店」，設定店號（建議直接用店家電話）、店名和你的手機號碼，就完成了。店員則由店長在「設定 → 店裡的人」加入名單後，用店號和自己的手機號碼登入。</p>
+      </div>
+
+      <div class="qa">
+        <h3>店員登入不了？</h3>
+        <p>請店長確認「設定 → 店裡的人」裡面有那位店員的手機號碼，而且號碼完全正確。只有事先被加入名單的號碼才能進入該店家。</p>
+      </div>
+
+      <div class="qa">
+        <h3>忘記店號怎麼辦？</h3>
+        <p>店號通常就是店家自己的電話號碼。若真的想不起來，請已經登入中的同事到「設定」頁查看，店號就顯示在最上面。</p>
+      </div>
+
+      <div class="qa">
+        <h3>換手機或換號碼了？</h3>
+        <p>換手機：在新手機上輸入店號和原本的手機號碼即可，舊手機不受影響。換號碼：請店長到「設定 → 店裡的人」把舊的移除、新增新的號碼。</p>
+      </div>
+
+      <div class="qa">
+        <h3>訂單不小心標記成已取貨？</h3>
+        <p>標記後十秒內畫面下方會出現「復原」，點下去就會還原，連付款狀態也會一併回復。超過十秒的話，進到該筆訂單點「改回未取貨」即可。</p>
+      </div>
+
+      <div class="qa">
+        <h3>訂單可以刪除嗎？</h3>
+        <p>訂單採「作廢」而非刪除，作廢後不會出現在清單和統計裡，但紀錄仍保留，避免誤按造成帳目對不起來。</p>
+      </div>
+
+      <div class="qa">
+        <h3>沒有網路可以用嗎？</h3>
+        <p>目前需要網路連線，因為訂單資料要在店裡的多台裝置之間即時同步。</p>
+      </div>
+
+      <div class="qa">
+        <h3>要收費嗎？</h3>
+        <p>免費，沒有廣告，也沒有 App 內購買。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>聯絡我們</h2>
+      <div class="contact">
+        使用上有問題、想回報錯誤，或需要刪除店家資料，歡迎來信
+        <a href="mailto:support@btcto1m.com">support@btcto1m.com</a>，我們會盡快回覆。
+      </div>
+    </section>
+
+    <footer>
+      <div>訂單簿 · Order Book</div>
+      <div style="margin-top:10px">
+        <a href="/orderbook/privacy">隱私政策</a>
+        <span class="sep">·</span>
+        <a href="mailto:support@btcto1m.com">support@btcto1m.com</a>
+      </div>
+      <div style="margin-top:14px;opacity:.6">© 2026 btcto1m LLC</div>
+    </footer>
+  </div>
+</body>
+</html>
